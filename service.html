@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="SaaS Cloud Services of Stackly" />
+
+    <title>Services | Stackly SaaS Cloud Platform</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Custom Cursor Markup -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Preloader Start -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-rings">
+          <span class="preloader-ring preloader-ring-1"></span>
+          <span class="preloader-ring preloader-ring-2"></span>
+          <span class="preloader-ring preloader-ring-3"></span>
+          <div class="preloader-logo-wrap">
+            <img src="assets/logo.webp" alt="Stackly" class="preloader-logo" />
+          </div>
+        </div>
+        <div class="preloader-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="preloader-progress-bar"></span>
+        </div>
+        <div class="preloader-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back to top start -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
+        <svg class="back-to-top-progress" viewBox="0 0 56 56" aria-hidden="true">
+          <circle class="back-to-top-track" cx="28" cy="28" r="24"></circle>
+          <circle class="back-to-top-bar" cx="28" cy="28" r="24"></circle>
+        </svg>
+        <span class="back_to_top_icon"><i class="fas fa-arrow-up"></i></span>
+      </button>
+    </div>
+    <!-- Back to top end -->
+
+    <!-- start: Search Popup -->
+    <div class="search_popup">
+      <div class="search_close">
+        <button type="button" class="search_close_btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="search-box">
+              <input class="search-input-field" type="search" placeholder="Search projects, nodes, or database logs..." required />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Search Popup -->
+
+        <!-- start: Offcanvas Menu -->
+    <div class="tj-offcanvas-area">
+      <div class="offcanvas-header">
+        <a href="index.html" class="logo-container">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+        </a>
+        <button type="button" class="hamburger_close_btn" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="offcanvas-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="offcanvas-actions">
+        <a class="offcanvas-signin-btn" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+        <a class="tj-primary-btn offcanvas-cta-btn" href="getstarted.html">
+          <span class="btn-text">Get Started</span>
+          <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+        </a>
+      </div>
+    </div>
+    <div class="hamburger_bg"></div>
+    <!-- end: Offcanvas Menu -->
+
+    <!-- start: Header Area -->
+    <header class="header-area header-dark">
+      <div class="header-wrapper">
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav id="mobile-menu" class="mainmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html" class="active">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- start: Header Area (Sticky duplicate) -->
+    <header class="header-area header-duplicate header-sticky">
+      <div class="header-wrapper">
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav class="mainmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html" class="active">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- Main Content -->
+    <main>
+      <!-- Service Hero Section -->
+      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">What We Offer</span>
+            <h1 class="section-title split-text">Elastic <span>SaaS Solutions</span></h1>
+            <p class="section-desc">Deploy high-performance virtual layers, manage cluster networks, and automate database replication in a single cloud dashboard.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Services Grid -->
+      <section class="section-light">
+        <div class="container">
+          <div class="feature-cards-grid six-col">
+            <!-- Service 1 -->
+            <div class="tilt-card-wrapper reveal reveal-left">
+              <div class="tilt-card">
+                <div class="card-icon-box">
+                  <i class="fas fa-server"></i>
+                </div>
+                <h3 class="card-title">Elastic Compute Engine</h3>
+                <p class="card-desc">Spin up VPS computing nodes instantly. Choose custom vCPU, RAM, and SSD storage sizes tailored to your microservice clusters.</p>
+                <a href="404.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="tilt-card-wrapper reveal reveal-up">
+              <div class="tilt-card">
+                <div class="card-icon-box" style="color: var(--secondary); background-color: var(--secondary-glow);">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="card-title">Dynamic Load Balancer</h3>
+                <p class="card-desc">Distribute active customer traffic dynamically across localized edge nodes. Mitigate request latency and avoid cluster choke points.</p>
+                <a href="404.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="tilt-card-wrapper reveal reveal-right">
+              <div class="tilt-card">
+                <div class="card-icon-box" style="color: var(--accent); background-color: var(--accent-light);">
+                  <i class="fas fa-hdd"></i>
+                </div>
+                <h3 class="card-title">Redundant Object Storage</h3>
+                <p class="card-desc">Store asset archives, media files, and transaction datasets. Stackly replicates blocks across multiple secure sub-regions.</p>
+                <a href="404.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="tilt-card-wrapper reveal reveal-left">
+              <div class="tilt-card">
+                <div class="card-icon-box" style="color: var(--accent); background-color: var(--accent-light);">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="card-title">Virtual Network VPCs</h3>
+                <p class="card-desc">Configure isolated VPCs with personalized IP subnets. Protect databases with strict firewall rules and SSH keys gatekeepers.</p>
+                <a href="404.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="tilt-card-wrapper reveal reveal-up">
+              <div class="tilt-card">
+                <div class="card-icon-box" style="color: #10b981; background-color: var(--success-glow);">
+                  <i class="fas fa-database"></i>
+                </div>
+                <h3 class="card-title">Managed Database Pools</h3>
+                <p class="card-desc">Deploy production-ready PostgreSQL, Redis, and MySQL clusters. Stackly handles automated backups, updates, and failover routing.</p>
+                <a href="404.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="tilt-card-wrapper reveal reveal-right">
+              <div class="tilt-card">
+                <div class="card-icon-box">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <h3 class="card-title">Platform Telemetry & Audit</h3>
+                <p class="card-desc">Monitor global cluster health, CPU loads, bandwidth spikes, and database queries through live visual graphs and console logs.</p>
+                <a href="404.html" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Managed Kubernetes Section -->
+      <section class="section-padding" style="padding: 80px 0; background-color: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal reveal-left">
+              <span class="section-subtitle">Container Orchestration</span>
+              <h2 class="section-title">Fully Managed <span>Kubernetes</span> Clusters</h2>
+              <p class="section-desc">Deploy, scale, and manage containerized applications seamlessly. Our Managed Kubernetes service abstracts away the control plane complexities, allowing your team to focus strictly on shipping code.</p>
+              <ul class="check-list" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0;">
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Zero-downtime rolling updates.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Integrated CI/CD pipeline triggers.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Automatic node repairs and health checks.</li>
+              </ul>
+              <div style="margin-top: 32px;">
+                <a href="404.html" class="tj-primary-btn"><span class="btn-text">Explore Kubernetes</span></a>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal reveal-right">
+              <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80" alt="Kubernetes Cluster Network" style="border-radius: var(--radius-lg); width: 100%; border: 1px solid var(--border);" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data Flow Architecture Section -->
+      <section class="section-padding" style="padding: 80px 0;">
+        <div class="container text-center">
+          <div class="section-header reveal zoom-in" style="max-width: 600px; margin: 0 auto 50px;">
+            <span class="section-subtitle">Data Flow</span>
+            <h2 class="section-title">Global <span>Routing</span> Architecture</h2>
+            <p class="section-desc">Observe how requests are instantly balanced and routed securely across our edge nodes.</p>
+          </div>
+          <div class="reveal reveal-up" style="position: relative; max-width: 800px; margin: 0 auto; padding: 40px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+            <!-- SVG Data Flow Animation -->
+            <svg viewBox="0 0 600 200" style="width: 100%; height: auto;">
+              <path id="data-path-1" d="M 50 100 C 150 100, 200 50, 300 100" stroke="var(--border)" stroke-width="2" fill="none" />
+              <path id="data-path-2" d="M 50 100 C 150 100, 200 150, 300 100" stroke="var(--border)" stroke-width="2" fill="none" />
+              <path id="data-path-3" d="M 300 100 C 400 100, 450 50, 550 100" stroke="var(--border)" stroke-width="2" fill="none" />
+              <path id="data-path-4" d="M 300 100 C 400 100, 450 150, 550 100" stroke="var(--border)" stroke-width="2" fill="none" />
+              
+              <!-- Servers/Nodes -->
+              <circle cx="50" cy="100" r="25" fill="var(--bg-main)" stroke="var(--primary)" stroke-width="4" />
+              <text x="50" y="105" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="12">User</text>
+              
+              <circle cx="300" cy="100" r="35" fill="var(--bg-main)" stroke="var(--secondary)" stroke-width="4" class="animate-pulse-glow" />
+              <text x="300" y="105" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14">Load Balancer</text>
+              
+              <circle cx="550" cy="50" r="25" fill="var(--bg-main)" stroke="#10b981" stroke-width="4" />
+              <text x="550" y="55" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="12">Node 1</text>
+              
+              <circle cx="550" cy="150" r="25" fill="var(--bg-main)" stroke="#10b981" stroke-width="4" />
+              <text x="550" y="155" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="12">Node 2</text>
+              
+              <!-- Animated Data Packets -->
+              <circle r="5" fill="var(--primary)">
+                <animateMotion dur="2s" repeatCount="indefinite" path="M 50 100 C 150 100, 200 50, 300 100" />
+              </circle>
+              <circle r="5" fill="var(--secondary)">
+                <animateMotion dur="2.5s" repeatCount="indefinite" path="M 50 100 C 150 100, 200 150, 300 100" />
+              </circle>
+              <circle r="5" fill="#10b981">
+                <animateMotion dur="1.5s" repeatCount="indefinite" path="M 300 100 C 400 100, 450 50, 550 50" />
+              </circle>
+              <circle r="5" fill="#10b981">
+                <animateMotion dur="2s" repeatCount="indefinite" path="M 300 100 C 400 100, 450 150, 550 150" />
+              </circle>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Customer Success Metrics -->
+      <section class="section-padding" style="padding: 80px 0; background-color: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+          <div class="row g-4 text-center">
+            <div class="col-6 col-md-3 reveal reveal-up">
+              <h3 style="font-size: 3rem; font-family: var(--font-display); background: linear-gradient(45deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">99.99%</h3>
+              <p style="color: var(--text-muted); margin-top: 10px; font-weight: 600;">Uptime SLA</p>
+            </div>
+            <div class="col-6 col-md-3 reveal reveal-up delay-100">
+              <h3 style="font-size: 3rem; font-family: var(--font-display); background: linear-gradient(45deg, var(--secondary), var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">15ms</h3>
+              <p style="color: var(--text-muted); margin-top: 10px; font-weight: 600;">Avg Latency</p>
+            </div>
+            <div class="col-6 col-md-3 reveal reveal-up delay-200">
+              <h3 style="font-size: 3rem; font-family: var(--font-display); background: linear-gradient(45deg, var(--accent), #10b981); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">10B+</h3>
+              <p style="color: var(--text-muted); margin-top: 10px; font-weight: 600;">Requests / Mo</p>
+            </div>
+            <div class="col-6 col-md-3 reveal reveal-up delay-300">
+              <h3 style="font-size: 3rem; font-family: var(--font-display); background: linear-gradient(45deg, #10b981, var(--primary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">24/7</h3>
+              <p style="color: var(--text-muted); margin-top: 10px; font-weight: 600;">NOC Monitoring</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Edge CDN & Compute Section -->
+      <section class="section-padding" style="padding: 80px 0;">
+        <div class="container">
+          <div class="row align-items-center g-5 flex-lg-row-reverse">
+            <div class="col-lg-6 reveal reveal-right">
+              <span class="section-subtitle">Global Reach</span>
+              <h2 class="section-title">Ultra-Low Latency <span>Edge CDN</span></h2>
+              <p class="section-desc">Serve dynamic and static content to users worldwide in milliseconds. By executing compute functions directly at the edge, you drastically reduce server load and latency.</p>
+              <ul class="check-list" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0;">
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Serverless functions deployed to 50+ regions.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Real-time image optimization.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Intelligent DDoS filtering at the edge.</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 reveal reveal-left">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Edge Compute Global Network" style="border-radius: var(--radius-lg); width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.3);" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section>
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">FAQ & SLA Details</span>
+            <h2 class="section-title">Common <span>Technical Inquiries</span></h2>
+            <p class="section-desc">Learn about cluster deployment times, regional speed optimization, and backup policies.</p>
+          </div>
+
+          <div class="accordion-wrapper reveal reveal-up" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
+            <!-- Item 1 -->
+            <div class="accordion-item" style="border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background-color: var(--bg-card);">
+              <button class="accordion-header" style="width: 100%; border: none; background: none; padding: 24px 30px; text-align: left; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; outline: none;">
+                What is the SLA guarantee for Stackly cloud instances?
+                <i class="fas fa-chevron-down" style="font-size: 0.9rem; color: var(--text-light); transition: transform var(--transition-fast);"></i>
+              </button>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 30px;">
+                <p style="padding-bottom: 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  Stackly guarantees a 99.99% network node availability SLA for all enterprise computing clusters. If a cluster node fails, traffic is hot-routed to active backup units instantly without downtime.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item" style="border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background-color: var(--bg-card);">
+              <button class="accordion-header" style="width: 100%; border: none; background: none; padding: 24px 30px; text-align: left; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; outline: none;">
+                How does the Salem data center node minimize latency?
+                <i class="fas fa-chevron-down" style="font-size: 0.9rem; color: var(--text-light); transition: transform var(--transition-fast);"></i>
+              </button>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 30px;">
+                <p style="padding-bottom: 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  Our core Southern India datacenter (based near Chinna Thirupathi in Salem, TN) is connected directly to tier-1 network backbones. This provides sub-20ms ping latency to client devices across Chennai, bandwidth pools, and major South-East Asian tech hubs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item" style="border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background-color: var(--bg-card);">
+              <button class="accordion-header" style="width: 100%; border: none; background: none; padding: 24px 30px; text-align: left; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; outline: none;">
+                Can compute resources scale dynamically during traffic spikes?
+                <i class="fas fa-chevron-down" style="font-size: 0.9rem; color: var(--text-light); transition: transform var(--transition-fast);"></i>
+              </button>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 30px;">
+                <p style="padding-bottom: 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  Yes. Enabling our auto-scaler allows your VPS nodes to increase CPU allocation cores and memory limits dynamically. The load-balancer distributes the load across hot standby nodes automatically.
+                </p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item" style="border: 1.5px solid var(--border); border-radius: var(--radius-md); overflow: hidden; background-color: var(--bg-card);">
+              <button class="accordion-header" style="width: 100%; border: none; background: none; padding: 24px 30px; text-align: left; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; color: var(--text-main); display: flex; justify-content: space-between; align-items: center; outline: none;">
+                What backup options exist for database volumes?
+                <i class="fas fa-chevron-down" style="font-size: 0.9rem; color: var(--text-light); transition: transform var(--transition-fast);"></i>
+              </button>
+              <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease-out; padding: 0 30px;">
+                <p style="padding-bottom: 24px; color: var(--text-muted); font-size: 0.95rem; line-height: 1.6;">
+                  Managed database pools feature daily automatic snapshots saved in encrypted object storage clusters. Administrators can perform point-in-time recoveries back to any minute within the past 14 days.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-newsletter reveal reveal-up">
+          <div class="footer-newsletter-text">
+            <h3>Subscribe to Stackly Updates</h3>
+            <p>Get product releases, SLA notices, and cloud engineering guides in your inbox.</p>
+          </div>
+          <form class="footer-subscribe-form" action="404.html">
+            <input type="email" placeholder="Enter your email..." required />
+            <button type="submit" class="tj-primary-btn"><span class="btn-text">Subscribe</span></button>
+          </form>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="logo-container">
+              <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+            </div>
+            <p class="footer-about-desc">Ultimate SaaS Cloud and Dedicated Cluster Platform engineered for high-availability performance. Join 10,000+ developers scaling their infrastructure with us.</p>
+            <div class="social-links">
+              <a href="404.html" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="404.html">Core Features</a></li>
+              <li><a href="404.html">SaaS Solutions</a></li>
+              <li><a href="404.html">Security Shield</a></li>
+              <li><a href="404.html">API Reference</a></li>
+              <li><a href="404.html">Global Network</a></li>
+              <li><a href="404.html">Pricing Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Salem HQ Node</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 (0) 427 492 849</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@stacklycloud.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Stackly Labs. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+            <a href="404.html">SLA Commitment</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+

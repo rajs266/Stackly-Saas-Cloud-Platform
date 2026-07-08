@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Stackly - Premium SaaS Cloud Platform and Virtual Server Orchestration" />
+
+    <!-- Site Title -->
+    <title>Stackly - Premium SaaS Cloud Platform</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Custom Cursor Markup -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Preloader Start -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-rings">
+          <span class="preloader-ring preloader-ring-1"></span>
+          <span class="preloader-ring preloader-ring-2"></span>
+          <span class="preloader-ring preloader-ring-3"></span>
+          <div class="preloader-logo-wrap">
+            <img src="assets/logo.webp" alt="Stackly" class="preloader-logo" />
+          </div>
+        </div>
+        <div class="preloader-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="preloader-progress-bar"></span>
+        </div>
+        <div class="preloader-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back to top start -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
+        <svg class="back-to-top-progress" viewBox="0 0 56 56" aria-hidden="true">
+          <circle class="back-to-top-track" cx="28" cy="28" r="24"></circle>
+          <circle class="back-to-top-bar" cx="28" cy="28" r="24"></circle>
+        </svg>
+        <span class="back_to_top_icon"><i class="fas fa-arrow-up"></i></span>
+      </button>
+    </div>
+    <!-- Back to top end -->
+
+    <!-- start: Search Popup -->
+    <div class="search_popup">
+      <div class="search_close">
+        <button type="button" class="search_close_btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="search-box">
+              <input class="search-input-field" type="search" placeholder="Search projects, nodes, or database logs..." required />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Search Popup -->
+
+    <!-- start: Offcanvas Menu -->
+    <div class="tj-offcanvas-area">
+      <div class="offcanvas-header">
+        <a href="index.html" class="logo-container">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+        </a>
+        <button type="button" class="hamburger_close_btn" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="offcanvas-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="offcanvas-actions">
+        <a class="offcanvas-signin-btn" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+        <a class="tj-primary-btn offcanvas-cta-btn" href="getstarted.html">
+          <span class="btn-text">Get Started</span>
+          <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+        </a>
+      </div>
+    </div>
+    <div class="hamburger_bg"></div>
+    <!-- end: Offcanvas Menu -->
+
+    <!-- start: Header Area -->
+    <header class="header-area header-hero">
+      <div class="header-wrapper">
+        <!-- Site logo -->
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav id="mobile-menu" class="mainmenu">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Header right info -->
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile menu bar button -->
+        <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- start: Header Area (Sticky duplicate) -->
+    <header class="header-area header-duplicate header-sticky">
+      <div class="header-wrapper">
+        <!-- Site logo -->
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <!-- Navigation -->
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav class="mainmenu">
+            <ul>
+              <li><a href="index.html" class="active">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Header right info -->
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Mobile menu bar button -->
+        <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- Main Content -->
+    <main>
+      <!-- start: Hero Slider -->
+      <section class="hero-slider-section">
+        <div class="swiper hero-bg-slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"
+              data-hero-tag="SaaS Cloud Platform"
+              data-hero-title="Deploy &amp; Scale Your <span>SaaS Stack.</span>"
+              data-hero-desc="Provision virtual servers, manage subscriptions, monitor uptime, and scale multi-tenant workloads from one unified cloud dashboard.">
+              <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80');"></div>
+            </div>
+            <div class="swiper-slide"
+              data-hero-tag="Multi-Tenant SaaS"
+              data-hero-title="Real-Time <span>Cloud Analytics.</span>"
+              data-hero-desc="Track API usage, billing cycles, tenant metrics, and infrastructure health with live telemetry built for SaaS operators.">
+              <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80');"></div>
+            </div>
+            <div class="swiper-slide"
+              data-hero-tag="Secure SaaS Infrastructure"
+              data-hero-title="Enterprise-Grade <span>Cloud Security.</span>"
+              data-hero-desc="Isolated VPC tenants, encrypted storage, automated backups, and role-based access control for production SaaS applications.">
+              <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80');"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slide-overlay"></div>
+        <div class="container hero-content-layer">
+          <div class="hero-content-wrap">
+            <div class="hero-content-text" id="heroDynamicContent">
+              <div class="hero-tag"><span class="hero-tag-dot"></span><span id="heroTagText">SaaS Cloud Platform</span></div>
+              <h1 class="hero-title" id="heroTitle">Deploy &amp; Scale Your <span>SaaS Stack.</span></h1>
+              <p class="hero-description" id="heroDesc">Provision virtual servers, manage subscriptions, monitor uptime, and scale multi-tenant workloads from one unified cloud dashboard.</p>
+            </div>
+            <div class="hero-btns hero-btns-static">
+              <a class="tj-primary-btn" href="getstarted.html"><span class="btn-text">Get Started</span><span class="btn-icon"><i class="fas fa-rocket"></i></span></a>
+              <a class="filter-btn hero-secondary-btn" href="features.html"><span class="btn-text">Platform Features</span><span class="btn-icon"><i class="fas fa-layer-group"></i></span></a>
+            </div>
+            <div class="hero-slider-nav">
+              <button type="button" class="hero-prev" aria-label="Previous slide"><i class="fas fa-arrow-left"></i></button>
+              <button type="button" class="hero-next" aria-label="Next slide"><i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        <div class="hero-slider-pagination"></div>
+      </section>
+      <!-- end: Hero Slider -->
+
+      <!-- start: Client Brand Section ? infinite slide -->
+      <section id="client" class="section-compact section-light section-bordered client-marquee-section">
+        <div class="container">
+          <h5 class="client-heading">Trusted by developers across APAC and Southeast Asia</h5>
+        </div>
+        <div class="client-marquee" aria-label="Technology partners">
+          <div class="client-marquee-track">
+            <div class="client-marquee-group">
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="Docker" /><span>Docker</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" alt="AWS" /><span>AWS</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg" alt="Kubernetes" /><span>Kubernetes</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" alt="Node.js" /><span>Node.js</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="Python" /><span>Python</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" alt="React" /><span>React</span></div>
+            </div>
+            <div class="client-marquee-group" aria-hidden="true">
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/docker.svg" alt="" /><span>Docker</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/amazonaws.svg" alt="" /><span>AWS</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/kubernetes.svg" alt="" /><span>Kubernetes</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/nodedotjs.svg" alt="" /><span>Node.js</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/python.svg" alt="" /><span>Python</span></div>
+              <div class="client-logo-item"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/react.svg" alt="" /><span>React</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Client Brand Section -->
+
+      <!-- start: About Section -->
+      <section>
+        <div class="container">
+          <div class="about-intro-grid">
+            <div class="reveal reveal-left">
+              <span class="section-subtitle">About Stackly</span>
+              <h2 class="section-title section-title-left split-text">Tailored SaaS Cloud for Seamless Scale</h2>
+              <p class="section-desc section-desc-left">We transform complex infrastructure into point-and-click cloud operations. From elastic compute to automated database failovers, Stackly empowers teams to ship faster with predictable performance.</p>
+              <ul class="check-list">
+                <li><i class="fas fa-check-circle"></i> Elastic Compute & Auto-Scaling</li>
+                <li><i class="fas fa-check-circle"></i> Salem Edge Node Optimization</li>
+                <li><i class="fas fa-check-circle"></i> 99.99% SLA Uptime Guarantee</li>
+              </ul>
+              <div class="about-stats-row">
+                <div class="h3_countup reveal reveal-up">
+                  <div class="inline-content"><span class="counter" data-target="10">0</span><span class="count-plus">M+</span></div>
+                  <h4 class="title">API Calls / Day</h4>
+                </div>
+                <div class="h3_countup reveal reveal-up delay-100">
+                  <div class="inline-content"><span class="counter" data-target="3">0</span><span class="count-plus">x</span></div>
+                  <h4 class="title">Faster Routing</h4>
+                </div>
+              </div>
+            </div>
+            <div class="reveal reveal-right">
+              <div class="h3_about_img img-reveal">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=900&q=80" alt="Stackly cloud team" />
+                <div class="about_reviews">
+                  <ul>
+                    <li><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client" /></li>
+                    <li><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client" /></li>
+                    <li><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80" alt="Client" /></li>
+                    <li><span><i class="fas fa-plus"></i></span></li>
+                  </ul>
+                  <span class="text">1200+ Active APAC Developer Reviews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: About Section -->
+
+      <!-- start: Core Features 3D Cards Grid -->
+      <section class="section-light" style="background: linear-gradient(rgba(10, 15, 30, 0.8), rgba(10, 15, 30, 0.8)), url('assets/features_bg.png') center/cover no-repeat; --text-main: #ffffff; --text-readable: rgba(255, 255, 255, 0.8);">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">SaaS Features</span>
+            <h2 class="section-title">Engineered for absolute performance</h2>
+            <p class="section-desc">Spin up core VPS computing blocks, config subnet firewalls, and direct load balances effortlessly.</p>
+          </div>
+
+          <div class="feature-cards-grid">
+            <!-- Card 1 -->
+            <div class="tilt-card-wrapper reveal reveal-left">
+              <div class="tilt-card">
+                <div class="card-icon-box flip-icon">
+                  <i class="fas fa-server"></i>
+                </div>
+                <h3 class="card-title">Elastic Compute Engine</h3>
+                <p class="card-desc">Spin up VPS computing nodes instantly. Choose custom vCPUs, RAM, and local NVMe storage limits.</p>
+                <a href="service.html" class="card-link">Explore Compute <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="tilt-card-wrapper reveal reveal-up">
+              <div class="tilt-card">
+                <div class="card-icon-box flip-icon">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <h3 class="card-title">Dynamic Load Balancer</h3>
+                <p class="card-desc">Split traffic spikes dynamically across active cluster points. Mitigate request lags automatically.</p>
+                <a href="service.html" class="card-link">Explore Balancing <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="tilt-card-wrapper reveal reveal-right">
+              <div class="tilt-card">
+                <div class="card-icon-box flip-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3 class="card-title">Virtual Network VPCs</h3>
+                <p class="card-desc">Protect backend systems with subnet allocations, firewall rules, and SSH keys gateway permissions.</p>
+                <a href="service.html" class="card-link">Explore Network <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Core Features -->
+
+      <!-- start: Telemetry Diagnostics Section -->
+      <section class="dashboard-section">
+        <div class="container">
+          <div class="dashboard-container">
+            <!-- Left Side Interactive Mockup -->
+            <div class="dashboard-visual reveal reveal-left">
+              <div class="dashboard-header-bar">
+                <div class="dot-group">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="dashboard-title-bar">Active Telemetry Monitor</div>
+              </div>
+
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-num">99.99%</div>
+                  <div class="stat-label">Active Host SLA</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num">3x</div>
+                  <div class="stat-label">Faster Edge Routing</div>
+                </div>
+              </div>
+
+              <div class="chart-mockup">
+                <h4 class="chart-mockup-title">Cluster Processor Utilization</h4>
+                <div class="chart-bar-group">
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side Info Content -->
+            <div class="reveal reveal-right dashboard-content-col">
+              <span class="section-subtitle section-subtitle-left">Active Diagnostics</span>
+              <h2 class="section-title section-title-left dashboard-section-title">Complete transparency into your cloud stacks</h2>
+              <p class="section-desc section-desc-left dashboard-section-desc">
+                Our unified control console monitors server memory capacities, bandwidth transfers, database query response times, and edge node routing streams in real time.
+              </p>
+              
+              <ul class="check-list">
+                <li><i class="fas fa-check-circle"></i> Sub-20ms regional ping performance</li>
+                <li><i class="fas fa-check-circle"></i> Automated snapshots and backup recovery</li>
+                <li><i class="fas fa-check-circle"></i> Hot-standby replica node failovers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Telemetry Diagnostics Section -->
+
+      <!-- start: Working Process (Dark contrasts) -->
+      <section class="section-process-wrap section-light" style="background: linear-gradient(rgba(10, 15, 30, 0.8), rgba(10, 15, 30, 0.8)), url('assets/workflow_bg.png') center/cover no-repeat; --text-main: #ffffff; --text-readable: rgba(255, 255, 255, 0.8);">
+        <div class="container">
+          <div class="h3-working-process-section-wrap reveal zoom-in">
+            <div class="section-header reveal zoom-in">
+              <span class="section-subtitle">Workflow</span>
+              <h2 class="section-title">Deploy Container Clusters in 3 Steps</h2>
+            </div>
+
+            <div class="process-area">
+              <div class="process-border"></div>
+              <div class="process-wrap">
+                <!-- Step 1 -->
+                <div class="process-item reveal reveal-left">
+                  <span class="process-step">01</span>
+                  <div class="process-content">
+                    <h4>Quota Selection</h4>
+                    <p class="desc">Pick CPU cores, allocated RAM pools, and network routing configurations in sign up.</p>
+                  </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="process-item reveal reveal-up">
+                  <span class="process-step">02</span>
+                  <div class="process-content">
+                    <h4>Automated Deploy</h4>
+                    <p class="desc">Our automated provisioner deploys containers, VPC nodes, and locks SSH gateways.</p>
+                  </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="process-item reveal reveal-right">
+                  <span class="process-step">03</span>
+                  <div class="process-content">
+                    <h4>Active Scale</h4>
+                    <p class="desc">Link active load balancing tools and monitor data streams from your metrics console.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Working Process -->
+
+      <!-- start: Services Tab Panel -->
+      <section class="h3-service-section">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Core Solutions</span>
+            <h2 class="section-title">Reliable cloud solutions built to scale</h2>
+            <p class="section-desc">Select different components of your stack to see configurations details.</p>
+          </div>
+
+          <div class="services_stack_wrap reveal reveal-up">
+          <div class="services_stack" role="tablist" aria-label="Core Solutions">
+              <div class="service_item active" role="tab" tabindex="0" aria-selected="true"
+                data-img="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80"
+                data-title="Elastic Compute Engine VPS Nodes">
+                <span class="service_tab_num">01</span>
+                <div class="service_tab_media">
+                  <div class="service_flip_card">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=80" alt="Elastic Compute Engine VPS Nodes" />
+                  </div>
+                </div>
+                <div class="service_tab_content">
+                  <h3 class="service_tab_name">Elastic Compute Engine</h3>
+                  <p class="service_tab_desc">Deploy SaaS compute instances instantly with custom vCPU, RAM, and NVMe storage for multi-tenant workloads.</p>
+                </div>
+              </div>
+
+              <div class="service_item" role="tab" tabindex="0" aria-selected="false"
+                data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80"
+                data-title="Dynamic Traffic Load Balancers">
+                <span class="service_tab_num">02</span>
+                <div class="service_tab_media">
+                  <div class="service_flip_card">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80" alt="Dynamic Traffic Load Balancers" />
+                  </div>
+                </div>
+                <div class="service_tab_content">
+                  <h3 class="service_tab_name">Dynamic Load Balancers</h3>
+                  <p class="service_tab_desc">Route SaaS API traffic across active nodes automatically to prevent latency spikes during peak subscription usage.</p>
+                </div>
+              </div>
+
+              <div class="service_item" role="tab" tabindex="0" aria-selected="false"
+                data-img="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=900&q=80"
+                data-title="Redundant Object Storage Pools">
+                <span class="service_tab_num">03</span>
+                <div class="service_tab_media">
+                  <div class="service_flip_card">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=900&q=80" alt="Redundant Object Storage Pools" />
+                  </div>
+                </div>
+                <div class="service_tab_content">
+                  <h3 class="service_tab_name">Object Storage Pools</h3>
+                  <p class="service_tab_desc">Store tenant files, backups, and media assets with replicated SaaS storage clusters across regions.</p>
+                </div>
+              </div>
+
+              <div class="service_item" role="tab" tabindex="0" aria-selected="false"
+                data-img="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80"
+                data-title="Secure Isolated VPC Subnets">
+                <span class="service_tab_num">04</span>
+                <div class="service_tab_media">
+                  <div class="service_flip_card">
+                    <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=900&q=80" alt="Secure Isolated VPC Subnets" />
+                  </div>
+                </div>
+                <div class="service_tab_content">
+                  <h3 class="service_tab_name">Isolated VPC Subnets</h3>
+                  <p class="service_tab_desc">Isolate each SaaS tenant with dedicated subnets, firewall rules, and encrypted gateway access.</p>
+                </div>
+              </div>
+
+              <div class="service_item" role="tab" tabindex="0" aria-selected="false"
+                data-img="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80"
+                data-title="Automated Database Failovers">
+                <span class="service_tab_num">05</span>
+                <div class="service_tab_media">
+                  <div class="service_flip_card">
+                    <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80" alt="Automated Database Failovers" />
+                  </div>
+                </div>
+                <div class="service_tab_content">
+                  <h3 class="service_tab_name">Database Failovers</h3>
+                  <p class="service_tab_desc">Managed PostgreSQL and Redis with hot standby replicas and point-in-time recovery for SaaS data.</p>
+                </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Services Tab Panel -->
+
+      <!-- start: Marquee Continuous Scroll Section -->
+      <section class="h3-marquee-section section-light overflow-hidden">
+        <div class="container-fluid gx-0">
+          <div class="row">
+            <div class="col">
+              <div class="h3_marquee_wrap">
+                <div class="scroll-slider">
+                  <div class="scroll-wrapper">
+                    <div class="marquee-item-2">
+                      <span class="marquee-icon"><i class="fas fa-server"></i></span>
+                      <h3 class="marquee-text">ELASTIC COMPUTE</h3>
+                    </div>
+                    <div class="marquee-item-2">
+                      <span class="marquee-icon"><i class="fas fa-network-wired"></i></span>
+                      <h3 class="marquee-text">DYNAMIC ROUTING</h3>
+                    </div>
+                    <div class="marquee-item-2">
+                      <span class="marquee-icon"><i class="fas fa-shield-alt"></i></span>
+                      <h3 class="marquee-text">FIREWALL SHIELD</h3>
+                    </div>
+                  </div>
+                  <!-- Loop copy for seamless effect -->
+                  <div class="scroll-wrapper">
+                    <div class="marquee-item-2">
+                      <span class="marquee-icon"><i class="fas fa-server"></i></span>
+                      <h3 class="marquee-text">ELASTIC COMPUTE</h3>
+                    </div>
+                    <div class="marquee-item-2">
+                      <span class="marquee-icon"><i class="fas fa-network-wired"></i></span>
+                      <h3 class="marquee-text">DYNAMIC ROUTING</h3>
+                    </div>
+                    <div class="marquee-item-2">
+                      <span class="marquee-icon"><i class="fas fa-shield-alt"></i></span>
+                      <h3 class="marquee-text">FIREWALL SHIELD</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Marquee Section -->
+
+      <!-- start: Pricing Plans Switcher Grid -->
+      <section>
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Billing Scales</span>
+            <h2 class="section-title">Flexible cluster pricing plans</h2>
+            
+            <div class="price_switcher">
+              <p>Monthly</p>
+              <label class="toggle_switcher">
+                <input class="toggle-checkbox" type="checkbox" />
+                <span class="toggle-switch"></span>
+              </label>
+              <p>Yearly <span>(Save 15%)</span></p>
+            </div>
+          </div>
+
+          <div class="pricing_items_wrap">
+            <!-- Plan 1 -->
+            <div class="pricing_item reveal reveal-left">
+              <div class="pricing_header">
+                <h4 class="package_name">Basic Plan</h4>
+                <div class="package_desc">Essential vCPU VM instance</div>
+              </div>
+              <div class="pricing_value">
+                <span class="val">$12</span>
+                <span class="time">/ mo</span>
+              </div>
+              <ul class="pricing_features">
+                <li><i class="fas fa-check-circle"></i> 1 vCPU Processor Core</li>
+                <li><i class="fas fa-check-circle"></i> 2 GB RAM / 25GB Storage</li>
+                <li><i class="fas fa-check-circle"></i> DDoS Security Shield</li>
+                <li><i class="fas fa-times-circle"></i> Dynamic Load Balancers</li>
+                <li><i class="fas fa-times-circle"></i> Salem Priority Edge Node</li>
+              </ul>
+              <a href="404.html" class="btn btn-secondary py-3" style="border-radius: var(--radius-sm); font-weight: 700; transition: all 0.3s ease;">Provision Basic</a>
+            </div>
+
+            <!-- Plan 2 -->
+            <div class="pricing_item recommend reveal reveal-up">
+              <div class="pricing_header">
+                <h4 class="package_name" style="color: var(--primary);">Professional Plan</h4>
+                <div class="package_desc">Ideal for production apps</div>
+              </div>
+              <div class="pricing_value">
+                <span class="val">$45</span>
+                <span class="time">/ mo</span>
+              </div>
+              <ul class="pricing_features">
+                <li><i class="fas fa-check-circle"></i> 4 vCPU Processor Cores</li>
+                <li><i class="fas fa-check-circle"></i> 8 GB RAM / 120GB Storage</li>
+                <li><i class="fas fa-check-circle"></i> DDoS Security Shield</li>
+                <li><i class="fas fa-check-circle"></i> Dynamic Load Balancers</li>
+                <li><i class="fas fa-check-circle"></i> Salem Priority Edge Node</li>
+              </ul>
+              <a href="404.html" class="btn btn-primary py-3" style="border-radius: var(--radius-sm); font-weight: 700; background-color: var(--primary); border-color: var(--primary);">Provision Pro</a>
+            </div>
+
+            <!-- Plan 3 -->
+            <div class="pricing_item reveal reveal-right">
+              <div class="pricing_header">
+                <h4 class="package_name">Enterprise Plan</h4>
+                <div class="package_desc">Dedicated multi-cluster spec</div>
+              </div>
+              <div class="pricing_value">
+                <span class="val">Custom</span>
+                <span class="time"></span>
+              </div>
+              <ul class="pricing_features">
+                <li><i class="fas fa-check-circle"></i> Dedicated Node Hosting</li>
+                <li><i class="fas fa-check-circle"></i> Custom RAM / storage limits</li>
+                <li><i class="fas fa-check-circle"></i> Advanced Custom Firewall</li>
+                <li><i class="fas fa-check-circle"></i> Load Balancing clusters</li>
+                <li><i class="fas fa-check-circle"></i> Full Salem Region priority</li>
+              </ul>
+              <a href="404.html" class="btn btn-secondary py-3" style="border-radius: var(--radius-sm); font-weight: 700; transition: all 0.3s ease;">Contact Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Pricing plans -->
+
+      <!-- start: Solutions List with Image Reveal -->
+      <section class="section-light">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Platform Solutions</span>
+            <h2 class="section-title split-text">Discover How Stackly Empowers Teams</h2>
+            <p class="section-desc">Hover each solution to preview real deployment scenarios across compute, storage, and networking.</p>
+          </div>
+          <div class="service-list-wrap">
+            <div class="service_list_item reveal reveal-left" data-reveal-img="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80">
+              <div class="item_count"><span>01</span></div>
+              <div class="item_content">
+                <h3 class="title"><a href="404.html">Cloud Migration System</a></h3>
+                <p class="desc">Seamlessly transition legacy workloads to elastic cloud clusters with zero-downtime routing and automated rollback.</p>
+                <a class="card-link" href="404.html">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service_reveal_img"></div>
+            </div>
+            <div class="service_list_item reveal reveal-up" data-reveal-img="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=80">
+              <div class="item_count"><span>02</span></div>
+              <div class="item_content">
+                <h3 class="title"><a href="404.html">Mobile & API Gateway</a></h3>
+                <p class="desc">Deploy secure API endpoints and mobile backends with built-in rate limiting, auth tokens, and edge caching.</p>
+                <a class="card-link" href="404.html">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service_reveal_img"></div>
+            </div>
+            <div class="service_list_item reveal reveal-up delay-100" data-reveal-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+              <div class="item_count"><span>03</span></div>
+              <div class="item_content">
+                <h3 class="title"><a href="404.html">Database Failover Clusters</a></h3>
+                <p class="desc">Managed PostgreSQL and Redis with hot standby replicas, point-in-time recovery, and automatic traffic rerouting.</p>
+                <a class="card-link" href="404.html">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service_reveal_img"></div>
+            </div>
+            <div class="service_list_item reveal reveal-right" data-reveal-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80">
+              <div class="item_count"><span>04</span></div>
+              <div class="item_content">
+                <h3 class="title"><a href="404.html">Analytics Telemetry Dashboard</a></h3>
+                <p class="desc">Centralize CPU, memory, bandwidth, and query metrics into a unified real-time observability console.</p>
+                <a class="card-link" href="404.html">Learn More <i class="fas fa-arrow-right"></i></a>
+              </div>
+              <div class="service_reveal_img"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Solutions List -->
+
+      <!-- start: Testimonials Slider -->
+      <section class="testimonial-section">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Success Stories</span>
+            <h2 class="section-title split-text">Built on Trust, Proven by Teams</h2>
+            <p class="section-desc">Developers and SaaS founders rely on Stackly for predictable performance at scale.</p>
+          </div>
+        </div>
+        <div class="container-fluid">
+          <div class="swiper testimonial-slider reveal reveal-up">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-card flip-in-card">
+                  <div class="testimonial-thumb img-reveal"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" alt="Client testimonial" /></div>
+                  <div class="testimonial-body">
+                    <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Stackly cut our deployment time from days to minutes. The Salem edge node gives us sub-20ms latency for our Chennai user base."</p>
+                    <h4>Arun Mehta</h4><span>CTO, FinFlow SaaS</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card flip-in-card">
+                  <div class="testimonial-thumb img-reveal"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Client testimonial" /></div>
+                  <div class="testimonial-body">
+                    <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Auto-scaling during traffic spikes saved us from three major outages. The unified dashboard is exactly what our DevOps team needed."</p>
+                    <h4>Priya Sharma</h4><span>Lead Engineer, DataPulse</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card flip-in-card">
+                  <div class="testimonial-thumb img-reveal"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=600&q=80" alt="Client testimonial" /></div>
+                  <div class="testimonial-body">
+                    <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Migrating our multi-tenant SaaS to Stackly VPC subnets was seamless. Security audits passed on the first review cycle."</p>
+                    <h4>James Chen</h4><span>Founder, CloudNest</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card flip-in-card">
+                  <div class="testimonial-thumb img-reveal"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" alt="Client testimonial" /></div>
+                  <div class="testimonial-body">
+                    <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Our Kubernetes workloads deploy in under 90 seconds. Stackly's Salem region node keeps latency predictable for South India users."</p>
+                    <h4>Meera Krishnan</h4><span>DevOps Lead, ScaleForge</span>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="testimonial-card flip-in-card">
+                  <div class="testimonial-thumb img-reveal"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Client testimonial" /></div>
+                  <div class="testimonial-body">
+                    <div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Billing transparency and usage alerts helped us cut cloud spend by 32% without sacrificing uptime during peak subscription renewals."</p>
+                    <h4>Rahul Desai</h4><span>VP Engineering, PayStream</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- end: Testimonials -->
+
+      <!-- start: Integration / Tech Stack -->
+      <section class="integration-section section-light">
+        <div class="integration-arena">
+          <div class="container">
+            <div class="integration-header integration-header-split reveal reveal-left">
+              <div class="integration-header-main">
+                <span class="section-subtitle">Integrations</span>
+                <h2 class="section-title section-title-left">Connect Your Entire<br>Dev Stack</h2>
+              </div>
+              <div class="integration-header-side">
+                <p class="section-desc section-desc-left">Deploy faster with native integrations for CI/CD, monitoring, and collaboration tools. Connect webhooks, sync secrets, automate release pipelines, and monitor every service from a single unified control plane.</p>
+              </div>
+            </div>
+          </div>
+          <div class="integration-grid" aria-label="Integration partners">
+          <div class="integration-chip" data-brand="#2496ED" style="--chip-brand: #2496ED"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/docker/2496ED" alt="" /></span><span>Docker</span></div>
+          <div class="integration-chip" data-brand="#326CE5" style="--chip-brand: #326CE5"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/kubernetes/326CE5" alt="" /></span><span>Kubernetes</span></div>
+          <div class="integration-chip" data-brand="#181717" style="--chip-brand: #181717"><span class="integration-chip-icon integration-chip-icon--dark"><img src="https://cdn.simpleicons.org/github/white" alt="" /></span><span>GitHub</span></div>
+          <div class="integration-chip" data-brand="#FC6D26" style="--chip-brand: #FC6D26"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="" /></span><span>GitLab</span></div>
+          <div class="integration-chip" data-brand="#7B42BC" style="--chip-brand: #7B42BC"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/terraform/7B42BC" alt="" /></span><span>Terraform</span></div>
+          <div class="integration-chip" data-brand="#4A154B" style="--chip-brand: #4A154B"><span class="integration-chip-icon integration-chip-icon--brand"><img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/slack.svg" alt="" /></span><span>Slack</span></div>
+          <div class="integration-chip" data-brand="#F46800" style="--chip-brand: #F46800"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/grafana/F46800" alt="" /></span><span>Grafana</span></div>
+          <div class="integration-chip" data-brand="#4169E1" style="--chip-brand: #4169E1"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/postgresql/4169E1" alt="" /></span><span>PostgreSQL</span></div>
+          <div class="integration-chip" data-brand="#DC382D" style="--chip-brand: #DC382D"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/redis/DC382D" alt="" /></span><span>Redis</span></div>
+          <div class="integration-chip" data-brand="#009639" style="--chip-brand: #009639"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/nginx/009639" alt="" /></span><span>Nginx</span></div>
+          <div class="integration-chip" data-brand="#10A37F" style="--chip-brand: #10A37F"><span class="integration-chip-icon integration-chip-icon--openai"><svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true" fill="#ffffff"><path d="M22.282 9.821a5.985 5.985 0 0 0-.516-4.91 6.046 6.046 0 0 0-6.51-2.9A6.065 6.065 0 0 0 4.981 4.18a5.985 5.985 0 0 0-3.998 2.9 6.046 6.046 0 0 0 .743 7.097 5.98 5.98 0 0 0 .51 4.911 6.051 6.051 0 0 0 6.515 2.9A5.985 5.985 0 0 0 13.26 24a6.056 6.056 0 0 0 5.772-4.206 5.99 5.99 0 0 0 3.997-2.9 6.056 6.056 0 0 0-.747-7.073zM13.26 22.43a4.476 4.476 0 0 1-2.876-1.04l.141-.081 4.779-2.758a.795.795 0 0 0 .392-.681v-6.737l2.02 1.168a.071.071 0 0 1 .038.052v5.583a4.504 4.504 0 0 1-4.494 4.494zM3.6 18.304a4.47 4.47 0 0 1-.535-3.014l.142.085 4.783 2.759a.771.771 0 0 0 .78 0l5.843-3.369v2.332a.08.08 0 0 1-.033.062L9.74 19.95a4.5 4.5 0 0 1-6.14-1.646zM2.34 7.896a4.485 4.485 0 0 1 2.366-1.973V11.6a.766.766 0 0 0 .388.676l5.815 3.355-2.02 1.168a.076.076 0 0 1-.071 0l-4.83-2.786A4.504 4.504 0 0 1 2.34 7.872zm16.597 3.855l-5.833-3.387L15.119 7.2a.076.076 0 0 1 .071 0l4.83 2.791a4.494 4.494 0 0 1-.676 8.105v-5.678a.79.79 0 0 0-.407-.667zm2.01-3.023l-.141-.085-4.774-2.782a.776.776 0 0 0-.785 0L9.409 9.23V6.897a.066.066 0 0 1 .028-.061l4.83-2.787a4.5 4.5 0 0 1 6.68 4.66zm-12.64 4.135l-2.02-1.164a.08.08 0 0 1-.038-.057V6.075a4.5 4.5 0 0 1 7.375-3.453l-.142.08-4.778 2.758a.795.795 0 0 0-.393.681zm1.097-2.365l2.602-1.5 2.607 1.5v2.999l-2.597 1.5-2.607-1.5z"/></svg></span><span>OpenAI API</span></div>
+          <div class="integration-chip" data-brand="#635BFF" style="--chip-brand: #635BFF"><span class="integration-chip-icon"><img src="https://cdn.simpleicons.org/stripe/635BFF" alt="" /></span><span>Stripe</span></div>
+        </div>
+        </div>
+      </section>
+      <!-- end: Integration -->
+
+      <!-- start: Blog Preview -->
+      <section>
+        <div class="container">
+          <div class="section-header section-header-row reveal zoom-in">
+            <div>
+              <span class="section-subtitle">Tech Blog</span>
+              <h2 class="section-title split-text">Latest Cloud & SaaS Insights</h2>
+            </div>
+            <a class="tj-primary-btn d-none d-md-inline-flex" href="blog.html"><span class="btn-text">View All Posts</span><span class="btn-icon"><i class="fas fa-arrow-right"></i></span></a>
+          </div>
+          <div class="blog-grid">
+            <article class="blog-card reveal reveal-left">
+              <div class="blog-img-box img-reveal"><a href="blog.html"><img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Cloud migration blog" /></a><span class="blog-tag">Migration</span></div>
+              <div class="blog-info"><span class="blog-date">Mar 12, 2026</span><h3 class="blog-title"><a href="blog.html">How to Migrate Your SaaS to the Cloud Without Downtime</a></h3><div class="blog-meta"><div class="blog-author"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Author" class="blog-author-img" /><span>Rajesh Kumar</span></div><a href="blog.html" class="card-link">Read <i class="fas fa-arrow-right"></i></a></div></div>
+            </article>
+            <article class="blog-card reveal reveal-up">
+              <div class="blog-img-box img-reveal"><a href="blog.html"><img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80" alt="DevOps blog" /></a><span class="blog-tag">DevOps</span></div>
+              <div class="blog-info"><span class="blog-date">Mar 8, 2026</span><h3 class="blog-title"><a href="blog.html">Auto-Scaling Best Practices for Multi-Tenant SaaS</a></h3><div class="blog-meta"><div class="blog-author"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Author" class="blog-author-img" /><span>Divya Sharma</span></div><a href="blog.html" class="card-link">Read <i class="fas fa-arrow-right"></i></a></div></div>
+            </article>
+            <article class="blog-card reveal reveal-right">
+              <div class="blog-img-box img-reveal"><a href="blog.html"><img src="https://images.unsplash.com/photo-1544256718-3bcf237f3974?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjUwfHx3ZWJzaXRlJTIwc2VjdXJpdHl8ZW58MHx8MHx8fDA%3D" alt="Security blog" /></a><span class="blog-tag">Security</span></div>
+              <div class="blog-info"><span class="blog-date">Mar 1, 2026</span><h3 class="blog-title"><a href="blog.html">VPC Subnet Security Patterns for Compliance-Ready SaaS</a></h3><div class="blog-meta"><div class="blog-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Author" class="blog-author-img" /><span>Priya Nair</span></div><a href="blog.html" class="card-link">Read <i class="fas fa-arrow-right"></i></a></div></div>
+            </article>
+          </div>
+          <div class="text-center d-md-none mt-4"><a class="tj-primary-btn" href="blog.html"><span class="btn-text">View All Posts</span><span class="btn-icon"><i class="fas fa-arrow-right"></i></span></a></div>
+        </div>
+      </section>
+      <!-- end: Blog Preview -->
+
+      <!-- start: CTA Banner -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-inner reveal zoom-in">
+            <div class="cta-content">
+              <h2 class="split-text">Ready to Deploy Your Cloud Stack?</h2>
+              <p>Start provisioning compute nodes in under 60 seconds. No credit card required for the trial cluster.</p>
+            </div>
+            <div class="cta-actions">
+              <a class="tj-primary-btn" href="getstarted.html"><span class="btn-text">Start Free Trial</span><span class="btn-icon"><i class="fas fa-arrow-right"></i></span></a>
+              <a class="filter-btn cta-secondary" href="contact.html">Contact Sales</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: CTA Banner -->
+
+      <!-- start: SLA FAQ Accordions Section -->
+      <section class="section-light">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">FAQ & SLA Details</span>
+            <h2 class="section-title">Common Technical Questions</h2>
+            <p class="section-desc">Learn about cluster deployment times, regional speed optimization, and backup policies.</p>
+          </div>
+
+          <div class="accordion-wrapper reveal reveal-up">
+            <!-- Item 1 -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                What is the SLA guarantee for Stackly cloud instances?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <p>Stackly guarantees a 99.99% network node availability SLA for all enterprise computing clusters. If a cluster node fails, traffic is hot-routed to active backup units instantly without downtime.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                How does the Salem data center node minimize latency?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <p>Our core Southern India datacenter (based near Chinna Thirupathi in Salem, TN) is connected directly to tier-1 network backbones. This provides sub-20ms ping latency to client devices across Chennai, Bangalore, and major South-East Asian tech hubs.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                Can compute resources scale dynamically during traffic spikes?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <p>Yes. Enabling our auto-scaler allows your VPS nodes to increase CPU allocation cores and memory limits dynamically. The load-balancer distributes the load across hot standby nodes automatically.</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                Do you provide support after cluster deployment?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <p>All plans include 24/7 SecOps monitoring. Professional and Enterprise tiers add dedicated account managers, priority ticket routing, and quarterly architecture reviews.</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="accordion-item">
+              <button class="accordion-header" type="button">
+                Is my data secure with Stackly solutions?
+                <i class="fas fa-chevron-down"></i>
+              </button>
+              <div class="accordion-content">
+                <p>Yes. All data is encrypted at rest and in transit. VPC isolation, SSH key gateways, DDoS mitigation, and automated backup snapshots are included across all production tiers.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end: SLA FAQ Accordions -->
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-newsletter reveal reveal-up">
+          <div class="footer-newsletter-text">
+            <h3>Subscribe to Stackly Updates</h3>
+            <p>Get product releases, SLA notices, and cloud engineering guides in your inbox.</p>
+          </div>
+          <form class="footer-subscribe-form" action="404.html">
+            <input type="email" placeholder="Enter your email..." required />
+            <button type="submit" class="tj-primary-btn"><span class="btn-text">Subscribe</span></button>
+          </form>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="logo-container">
+              <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+            </div>
+            <p class="footer-about-desc">Ultimate SaaS Cloud and Dedicated Cluster Platform engineered for high-availability performance. Join 10,000+ developers scaling their infrastructure with us.</p>
+            <div class="social-links">
+              <a href="404.html" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="404.html">Core Features</a></li>
+              <li><a href="404.html">SaaS Solutions</a></li>
+              <li><a href="404.html">Security Shield</a></li>
+              <li><a href="404.html">API Reference</a></li>
+              <li><a href="404.html">Global Network</a></li>
+              <li><a href="404.html">Pricing Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Salem HQ Node</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 (0) 427 492 849</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@stacklycloud.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Stackly Labs. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+            <a href="404.html">SLA Commitment</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+

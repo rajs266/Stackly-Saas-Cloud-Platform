@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="About Stackly SaaS Cloud Platform" />
+
+    <title>About Us | Stackly SaaS Cloud Platform</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Custom Cursor Markup -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Preloader Start -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-rings">
+          <span class="preloader-ring preloader-ring-1"></span>
+          <span class="preloader-ring preloader-ring-2"></span>
+          <span class="preloader-ring preloader-ring-3"></span>
+          <div class="preloader-logo-wrap">
+            <img src="assets/logo.webp" alt="Stackly" class="preloader-logo" />
+          </div>
+        </div>
+        <div class="preloader-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="preloader-progress-bar"></span>
+        </div>
+        <div class="preloader-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back to top start -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
+        <svg class="back-to-top-progress" viewBox="0 0 56 56" aria-hidden="true">
+          <circle class="back-to-top-track" cx="28" cy="28" r="24"></circle>
+          <circle class="back-to-top-bar" cx="28" cy="28" r="24"></circle>
+        </svg>
+        <span class="back_to_top_icon"><i class="fas fa-arrow-up"></i></span>
+      </button>
+    </div>
+    <!-- Back to top end -->
+
+    <!-- start: Search Popup -->
+    <div class="search_popup">
+      <div class="search_close">
+        <button type="button" class="search_close_btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="search-box">
+              <input class="search-input-field" type="search" placeholder="Search projects, nodes, or database logs..." required />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Search Popup -->
+
+        <!-- start: Offcanvas Menu -->
+    <div class="tj-offcanvas-area">
+      <div class="offcanvas-header">
+        <a href="index.html" class="logo-container">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+        </a>
+        <button type="button" class="hamburger_close_btn" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="offcanvas-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="offcanvas-actions">
+        <a class="offcanvas-signin-btn" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+        <a class="tj-primary-btn offcanvas-cta-btn" href="getstarted.html">
+          <span class="btn-text">Get Started</span>
+          <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+        </a>
+      </div>
+    </div>
+    <div class="hamburger_bg"></div>
+    <!-- end: Offcanvas Menu -->
+
+    <!-- start: Header Area -->
+    <header class="header-area header-dark">
+      <div class="header-wrapper">
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav id="mobile-menu" class="mainmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" class="active">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- start: Header Area (Sticky duplicate) -->
+    <header class="header-area header-duplicate header-sticky">
+      <div class="header-wrapper">
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav class="mainmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html" class="active">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- Main content -->
+    <main>
+      <!-- About Hero Section -->
+      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Our Mission</span>
+            <h1 class="section-title split-text">Architecting the next-gen <span>SaaS Cloud</span></h1>
+            <p class="section-desc">We build cluster infrastructure tools that allow developers to provision, allocate subnets, and scale microservices instantly with absolute predictability.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Story Section -->
+      <section class="section-light">
+        <div class="container">
+          <div class="about-intro-grid">
+            <div class="reveal reveal-left">
+              <h2 style="font-size: 2.25rem; margin-bottom: 24px; font-family: var(--font-display); line-height: 1.3;">Simplifying cluster operations for developers</h2>
+              <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 1.05rem; line-height: 1.7;">
+                Stackly was founded on a simple premise: provisioning scalable servers should not require complex configuration scripts. Our team designed a modular platform that packages containers, routing pools, database replica volumes, and load balancing nodes into unified point-and-click control grids.
+              </p>
+              <p style="color: var(--text-muted); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.7;">
+                Operating primarily from our Salem technical headquarters, we manage low-latency networks directly serving developers across the APAC and Southeast Asia regions.
+              </p>
+              
+              <div class="about-features-list">
+                <div class="about-feat-item">
+                  <div class="about-feat-icon"><i class="fas fa-check"></i></div>
+                  <div>
+                    <h5 class="about-feat-title">High SLA Guarantee</h5>
+                    <p class="about-feat-desc">99.99% network node availability standard.</p>
+                  </div>
+                </div>
+                <div class="about-feat-item">
+                  <div class="about-feat-icon"><i class="fas fa-check"></i></div>
+                  <div>
+                    <h5 class="about-feat-title">APAC Optimization</h5>
+                    <p class="about-feat-desc">Localized edge routes for sub-20ms ping scores.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="reveal reveal-right">
+              <div class="h3_about_img">
+                <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80" alt="SaaS cloud development team" />
+
+                <!-- Reviews badge -->
+                <div class="about_reviews">
+                  <ul>
+                    <li><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Client" /></li>
+                    <li><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Client" /></li>
+                    <li><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80" alt="Client" /></li>
+                    <li><span><i class="fas fa-plus"></i></span></li>
+                  </ul>
+                  <span class="text">1200+ Active APAC Core Reviews</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4" style="margin-top: 60px;">
+            <div class="col-sm-6 col-lg-3">
+              <div class="h3_countup reveal reveal-up">
+                <div class="inline-content">
+                  <span class="counter">10</span>
+                  <span class="count-plus">M+</span>
+                </div>
+                <h4 class="title">Active API Calls</h4>
+                <span class="desc">Processing terabytes of data daily across cluster regions.</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="h3_countup reveal reveal-up delay-100">
+                <div class="inline-content">
+                  <span class="counter">3</span>
+                  <span class="count-plus">X Faster</span>
+                </div>
+                <h4 class="title">Edge Speeds</h4>
+                <span class="desc">Sub-20ms pings compared to standard foreign servers.</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="h3_countup reveal reveal-up delay-200">
+                <div class="inline-content">
+                  <span class="counter">99.99</span>
+                  <span class="count-plus">%</span>
+                </div>
+                <h4 class="title">Uptime SLA</h4>
+                <span class="desc">Constant node tracking and dynamic traffic re-routing.</span>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-3">
+              <div class="h3_countup reveal reveal-up delay-300">
+                <div class="inline-content">
+                  <span class="counter">24</span>
+                  <span class="count-plus">/7</span>
+                </div>
+                <h4 class="title">SecOps Support</h4>
+                <span class="desc">Always-on network engineering and cluster firewalls.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Journey Section -->
+      <section class="section-padding" style="padding: 80px 0;">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal reveal-left">
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Tech Team" style="border-radius: var(--radius-lg); width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.3);" />
+            </div>
+            <div class="col-lg-6 reveal reveal-right">
+              <span class="section-subtitle">Our Journey</span>
+              <h2 class="section-title">From a single node to a <span>Global Network</span></h2>
+              <p class="section-desc">What started in a small workspace has evolved into a global movement. We realized early on that developers were spending too much time configuring servers instead of writing code. Stackly was born out of the necessity to abstract infrastructure complexities.</p>
+              <ul class="check-list" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0;">
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> <strong>2020:</strong> Launched first Beta cluster in Chennai.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> <strong>2022:</strong> Expanded to 15 global edge locations.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> <strong>2024:</strong> Achieved SOC2 Type II Certification.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> <strong>2026:</strong> Powering over 10,000+ developer ecosystems.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Core Values Section with Tilt Effects -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Our Core Values</span>
+            <h2 class="section-title">What Drives <span>Us</span></h2>
+            <p class="section-desc">The principles that power our engineering culture and client relationships.</p>
+          </div>
+          <div class="row g-4 mt-4">
+            <div class="col-md-4 reveal reveal-up">
+              <div class="tilt-card-wrapper" style="height: 100%;">
+                <div class="tilt-card" style="height: 100%; text-align: center; padding: 40px 20px;">
+                  <div class="card-icon-box mx-auto" style="margin-bottom: 24px;">
+                    <i class="fas fa-rocket animate-float"></i>
+                  </div>
+                  <h3 class="card-title">Velocity</h3>
+                  <p class="card-desc">We ship features fast and scale infrastructure instantly, empowering developers to move at lightspeed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 reveal reveal-up delay-100">
+              <div class="tilt-card-wrapper" style="height: 100%;">
+                <div class="tilt-card" style="height: 100%; text-align: center; padding: 40px 20px;">
+                  <div class="card-icon-box mx-auto" style="margin-bottom: 24px; color: #10b981; background: var(--success-glow);">
+                    <i class="fas fa-lock animate-float-delay"></i>
+                  </div>
+                  <h3 class="card-title">Security First</h3>
+                  <p class="card-desc">Zero-trust is not an afterthought; it is built into the foundational layer of every cluster we deploy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 reveal reveal-up delay-200">
+              <div class="tilt-card-wrapper" style="height: 100%;">
+                <div class="tilt-card" style="height: 100%; text-align: center; padding: 40px 20px;">
+                  <div class="card-icon-box mx-auto" style="margin-bottom: 24px; color: var(--accent); background: var(--accent-light);">
+                    <i class="fas fa-hands-helping animate-float"></i>
+                  </div>
+                  <h3 class="card-title">Transparency</h3>
+                  <p class="card-desc">Clear pricing, public uptime status, and open-source contributions. We build in the open.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Trusted Partners Infinite Marquee -->
+      <section class="section-padding" style="padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background-color: var(--bg-card);">
+        <div class="container-fluid overflow-hidden">
+          <div class="marquee-container">
+            <div class="marquee-content">
+              <div class="marquee-item"><i class="fab fa-aws"></i> &nbsp;AWS Certified</div>
+              <div class="marquee-item"><i class="fab fa-docker"></i> &nbsp;Docker Hub</div>
+              <div class="marquee-item"><i class="fab fa-github"></i> &nbsp;GitHub Partners</div>
+              <div class="marquee-item"><i class="fab fa-linux"></i> &nbsp;Linux Foundation</div>
+              <div class="marquee-item"><i class="fab fa-digital-ocean"></i> &nbsp;Ocean Networks</div>
+              <div class="marquee-item"><i class="fab fa-cloudflare"></i> &nbsp;Cloudflare Edge</div>
+              <div class="marquee-item"><i class="fab fa-stripe"></i> &nbsp;Stripe Billing</div>
+              <!-- Duplicate for seamless scroll -->
+              <div class="marquee-item"><i class="fab fa-aws"></i> &nbsp;AWS Certified</div>
+              <div class="marquee-item"><i class="fab fa-docker"></i> &nbsp;Docker Hub</div>
+              <div class="marquee-item"><i class="fab fa-github"></i> &nbsp;GitHub Partners</div>
+              <div class="marquee-item"><i class="fab fa-linux"></i> &nbsp;Linux Foundation</div>
+              <div class="marquee-item"><i class="fab fa-digital-ocean"></i> &nbsp;Ocean Networks</div>
+              <div class="marquee-item"><i class="fab fa-cloudflare"></i> &nbsp;Cloudflare Edge</div>
+              <div class="marquee-item"><i class="fab fa-stripe"></i> &nbsp;Stripe Billing</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Infrastructure Section -->
+      <section class="section-padding" style="padding: 80px 0; background-color: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal reveal-left">
+              <span class="section-subtitle">Global Infrastructure</span>
+              <h2 class="section-title">Built for <span>Resilience</span></h2>
+              <p class="section-desc">Our data centers are strategically located across Tier-1 IXPs globally. We utilize advanced BGP anycast routing to ensure your data is always closer to your users, guaranteeing sub-millisecond latency and zero packet loss.</p>
+              
+              <div class="row g-4 mt-2">
+                <div class="col-sm-6">
+                  <div style="border-left: 3px solid var(--primary); padding-left: 15px;">
+                    <h3 style="color: var(--text-main); font-family: var(--font-display); font-size: 2rem;">50+</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Global Edge PoPs</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div style="border-left: 3px solid var(--secondary); padding-left: 15px;">
+                    <h3 style="color: var(--text-main); font-family: var(--font-display); font-size: 2rem;">12Tbps</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Network Capacity</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div style="border-left: 3px solid var(--accent); padding-left: 15px;">
+                    <h3 style="color: var(--text-main); font-family: var(--font-display); font-size: 2rem;">100%</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Green Energy</p>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div style="border-left: 3px solid #10b981; padding-left: 15px;">
+                    <h3 style="color: var(--text-main); font-family: var(--font-display); font-size: 2rem;">Zero</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">Single Point of Failure</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-6 reveal reveal-right">
+              <div style="position: relative; padding: 20px;">
+                <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Global Datacenter Infrastructure" style="border-radius: var(--radius-lg); width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.4);" />
+                
+                <!-- Floating Info Card -->
+                <div class="animate-float" style="position: absolute; bottom: 0px; left: 0px; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); padding: 20px; border-radius: var(--radius-md); box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; align-items: center; gap: 15px; z-index: 2;">
+                  <div class="animate-pulse-glow" style="width: 50px; height: 50px; background: var(--bg-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--primary); font-size: 1.5rem;">
+                    <i class="fas fa-server"></i>
+                  </div>
+                  <div>
+                    <h4 style="color: var(--text-main); font-size: 1.1rem; margin-bottom: 4px;">Node Status</h4>
+                    <p style="color: #10b981; font-size: 0.9rem; margin: 0; font-weight: 600;"><i class="fas fa-circle" style="font-size: 0.6rem; vertical-align: middle;"></i> All Systems Operational</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section with 3D Flip Cards -->
+      <section>
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Leadership</span>
+            <h2 class="section-title">The Engineers Behind <span>Stackly</span></h2>
+            <p class="section-desc">Our executive steering team combines cloud infrastructure engineering, data cluster operations, and network security.</p>
+          </div>
+
+          <div class="team-grid">
+            <!-- Member 1 -->
+            <div class="team-card-wrapper reveal reveal-left">
+              <div class="team-card-inner">
+                <div class="team-card-front">
+                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" alt="Rajesh Kumar CEO" class="team-member-img" />
+                  <div class="team-member-info">
+                    <h4>Rajesh Kumar</h4>
+                    <p>CEO & Founder</p>
+                  </div>
+                </div>
+                <div class="team-card-back">
+                  <h4 style="margin-bottom: 8px;">Rajesh Kumar</h4>
+                  <p class="team-member-bio">Leading Stackly vision with 12+ years managing cloud node routing architectures across APAC networks.</p>
+                  <div class="team-socials">
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 2 -->
+            <div class="team-card-wrapper reveal reveal-up">
+              <div class="team-card-inner">
+                <div class="team-card-front">
+                  <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="Divya Sharma CTO" class="team-member-img" />
+                  <div class="team-member-info">
+                    <h4>Divya Sharma</h4>
+                    <p>CTO & Co-Founder</p>
+                  </div>
+                </div>
+                <div class="team-card-back">
+                  <h4 style="margin-bottom: 8px;">Divya Sharma</h4>
+                  <p class="team-member-bio">Managed container scheduling nodes at primary cloud infrastructures. Oversees all core codebases and platforms.</p>
+                  <div class="team-socials">
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 3 -->
+            <div class="team-card-wrapper reveal reveal-up delay-100">
+              <div class="team-card-inner">
+                <div class="team-card-front">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Amit Patel Infrastructure" class="team-member-img" />
+                  <div class="team-member-info">
+                    <h4>Amit Patel</h4>
+                    <p>VP of Infrastructure</p>
+                  </div>
+                </div>
+                <div class="team-card-back">
+                  <h4 style="margin-bottom: 8px;">Amit Patel</h4>
+                  <p class="team-member-bio">Expert in fiber node routing, data replication scripts, and hardware load balancing cluster configurations.</p>
+                  <div class="team-socials">
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Member 4 -->
+            <div class="team-card-wrapper reveal reveal-right">
+              <div class="team-card-inner">
+                <div class="team-card-front">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Priya Nair Security" class="team-member-img" />
+                  <div class="team-member-info">
+                    <h4>Priya Nair</h4>
+                    <p>VP of Cybersecurity</p>
+                  </div>
+                </div>
+                <div class="team-card-back">
+                  <h4 style="margin-bottom: 8px;">Priya Nair</h4>
+                  <p class="team-member-bio">Directs security audit logging, encryption keys allocation, and server DDoS mitigations protocols.</p>
+                  <div class="team-socials">
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="404.html" class="team-social-icon"><i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-newsletter reveal reveal-up">
+          <div class="footer-newsletter-text">
+            <h3>Subscribe to Stackly Updates</h3>
+            <p>Get product releases, SLA notices, and cloud engineering guides in your inbox.</p>
+          </div>
+          <form class="footer-subscribe-form" action="404.html">
+            <input type="email" placeholder="Enter your email..." required />
+            <button type="submit" class="tj-primary-btn"><span class="btn-text">Subscribe</span></button>
+          </form>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="logo-container">
+              <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+            </div>
+            <p class="footer-about-desc">Ultimate SaaS Cloud and Dedicated Cluster Platform engineered for high-availability performance. Join 10,000+ developers scaling their infrastructure with us.</p>
+            <div class="social-links">
+              <a href="404.html" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="404.html">Core Features</a></li>
+              <li><a href="404.html">SaaS Solutions</a></li>
+              <li><a href="404.html">Security Shield</a></li>
+              <li><a href="404.html">API Reference</a></li>
+              <li><a href="404.html">Global Network</a></li>
+              <li><a href="404.html">Pricing Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Salem HQ Node</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 (0) 427 492 849</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@stacklycloud.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Stackly Labs. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+            <a href="404.html">SLA Commitment</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+

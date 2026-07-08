@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Console | Stackly SaaS Cloud Platform</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Custom Cursor Markup -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="db-sidebar" style="border-right-color: rgba(59, 130, 246, 0.15);">
+      <div class="db-sidebar-header">
+        <a href="index.html" class="logo-container">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+      </div>
+      
+      <ul class="db-menu">
+        <li>
+          <a href="admin-dashboard.html" class="db-menu-link active">
+            <i class="fas fa-tools"></i> Overview
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-users-cog"></i> Tenant Operations
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-network-wired"></i> Nodes Monitor
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-cogs"></i> Billing System
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-shield-alt"></i> Security Logs
+          </a>
+        </li>
+        <li style="margin-top: auto;">
+          <a href="index.html" class="db-menu-link" style="color: var(--danger);">
+            <i class="fas fa-sign-out-alt"></i> Log Out
+          </a>
+        </li>
+      </ul>
+      
+      <div class="db-sidebar-footer">
+        <div class="db-user-mini">
+          <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Admin Profile" class="db-user-mini-img">
+          <div class="db-user-mini-info">
+            <h5>Rajesh Kumar</h5>
+            <p>System Administrator</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Main Area -->
+    <main class="db-main">
+      
+      <!-- Topbar -->
+      <header class="db-topbar">
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <button class="sidebar-toggle-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="db-search">
+            <i class="fas fa-terminal"></i>
+            <input type="text" placeholder="Run shell diagnostics or search logs...">
+          </div>
+        </div>
+        
+        <div class="db-topbar-actions">
+          <span style="font-size: 0.8rem; background-color: var(--success-glow); color: var(--success); padding: 6px 12px; border-radius: 50px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+            <span class="status-dot active"></span> Live System normal
+          </span>
+          
+          <a href="404.html" class="db-action-btn">
+            <i class="fas fa-bell"></i>
+            <span class="db-badge-dot"></span>
+          </a>
+          <a href="404.html" style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&q=80" alt="Profile" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="db-content">
+        
+        <!-- Welcome Bar -->
+        <div class="db-welcome-bar">
+          <div>
+            <h2 class="db-welcome-title">System Administration</h2>
+            <p class="db-welcome-subtitle">Global cluster metrics and tenant organizations for Stackly SaaS Platform.</p>
+          </div>
+          <div>
+            <a href="404.html" class="btn btn-primary" style="background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);">
+              <i class="fas fa-plus"></i> Spin Up Node
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="db-stats-grid">
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Active Tenants</h6>
+              <div class="db-stat-value">1,284</div>
+              <div class="db-stat-trend up">
+                <i class="fas fa-arrow-up"></i> +4.2% active clusters
+              </div>
+            </div>
+            <div class="db-stat-icon" style="color: var(--accent); background-color: rgba(59, 130, 246, 0.08);">
+              <i class="fas fa-users"></i>
+            </div>
+          </div>
+          
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Global Nodes</h6>
+              <div class="db-stat-value">42 / 42</div>
+              <div class="db-stat-trend up" style="color: var(--success);">
+                <i class="fas fa-check"></i> 100% Health Score
+              </div>
+            </div>
+            <div class="db-stat-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+          </div>
+
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Total Platform MRR</h6>
+              <div class="db-stat-value">$48,290</div>
+              <div class="db-stat-trend up">
+                <i class="fas fa-arrow-up"></i> +14.2% Growth
+              </div>
+            </div>
+            <div class="db-stat-icon" style="color: #10b981; background-color: var(--success-glow);">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+          </div>
+
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Platform Latency</h6>
+              <div class="db-stat-value">12.8ms</div>
+              <div class="db-stat-trend down" style="color: var(--success);">
+                <i class="fas fa-arrow-down"></i> -1.2ms reduction
+              </div>
+            </div>
+            <div class="db-stat-icon" style="color: var(--secondary); background-color: rgba(6, 182, 212, 0.08);">
+              <i class="fas fa-bolt"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Details Rows -->
+        <div class="db-row">
+          
+          <!-- Cluster Nodes Table -->
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Active Cloud Nodes Diagnostics</h3>
+              <a href="404.html" class="auth-link" style="font-size: 0.85rem; font-weight: 700;">View Node Map</a>
+            </div>
+            
+            <div class="table-wrapper" style="margin-top: 0; box-shadow: none; border: none;">
+              <table class="comparison-table" style="font-size: 0.9rem;">
+                <thead>
+                  <tr>
+                    <th>Cluster Node</th>
+                    <th>Subnet Address</th>
+                    <th>Average Load</th>
+                    <th>Memory Util</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="admin-node-row" style="cursor: pointer;">
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <span class="status-dot active"></span> Node-Salem-Primary
+                    </td>
+                    <td>103.45.18.0/24</td>
+                    <td>68% Load</td>
+                    <td>72% (Memory)</td>
+                    <td><span class="badge-status active">Operational</span></td>
+                  </tr>
+                  <tr class="admin-node-row" style="cursor: pointer;">
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <span class="status-dot active"></span> Node-Chennai-B
+                    </td>
+                    <td>103.45.19.0/24</td>
+                    <td>42% Load</td>
+                    <td>38% (Memory)</td>
+                    <td><span class="badge-status active">Operational</span></td>
+                  </tr>
+                  <tr class="admin-node-row" style="cursor: pointer;">
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <span class="status-dot active"></span> Node-Singapore-Edge
+                    </td>
+                    <td>128.92.12.0/24</td>
+                    <td>56% Load</td>
+                    <td>54% (Memory)</td>
+                    <td><span class="badge-status active">Operational</span></td>
+                  </tr>
+                  <tr class="admin-node-row" style="cursor: pointer;">
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <span class="status-dot pending"></span> Node-US-West-HotBackup
+                    </td>
+                    <td>192.168.4.0/24</td>
+                    <td>12% Load</td>
+                    <td>15% (Memory)</td>
+                    <td><span class="badge-status pending">Standby Sync</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Platform Capacities -->
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Global Pool Allocation</h3>
+            </div>
+            
+            <div class="db-progress-group">
+              <div class="db-progress-info">
+                <span class="db-progress-label">Total Allocated Cores</span>
+                <span class="db-progress-val">842 / 1200 Cores</span>
+              </div>
+              <div class="db-progress-bg">
+                <div class="db-progress-bar" data-value="70%"></div>
+              </div>
+            </div>
+
+            <div class="db-progress-group">
+              <div class="db-progress-info">
+                <span class="db-progress-label">Allocated RAM Pool</span>
+                <span class="db-progress-val">3.2 TB / 4.0 TB RAM</span>
+              </div>
+              <div class="db-progress-bg">
+                <div class="db-progress-bar" data-value="80%" style="background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);"></div>
+              </div>
+            </div>
+
+            <div class="db-progress-group" style="margin-bottom: 0;">
+              <div class="db-progress-info">
+                <span class="db-progress-label">Egress Bandwidth Pools</span>
+                <span class="db-progress-val">420 TB / 1000 TB Pool</span>
+              </div>
+              <div class="db-progress-bg">
+                <div class="db-progress-bar" data-value="42%" style="background: linear-gradient(90deg, var(--secondary) 0%, #10b981 100%);"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Audit Log Rows -->
+        <div class="db-row equal">
+          
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Audit Trails & Logs</h3>
+            </div>
+            
+            <div class="db-feed">
+              <div class="db-feed-item">
+                <div class="db-feed-indicator success">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="db-feed-content">
+                  <h5>Global Node-Salem-Primary HotBackup Successful</h5>
+                  <p>System automated backup agent verified (120GB raw image size) � 25 mins ago</p>
+                </div>
+              </div>
+
+              <div class="db-feed-item">
+                <div class="db-feed-indicator success">
+                  <i class="fas fa-user-plus"></i>
+                </div>
+                <div class="db-feed-content">
+                  <h5>New tenant provisioned: Stackly Labs LLC</h5>
+                  <p>Cluster code region APAC-SOUTH-1A allocated � 1 hour ago</p>
+                </div>
+              </div>
+
+              <div class="db-feed-item">
+                <div class="db-feed-indicator danger">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="db-feed-content">
+                  <h5>Firewall block trigger: DDoS Mitigation Active</h5>
+                  <p>Blocked 4,284 invalid requests targeting sub-cluster node Chennai-B IP range � 4 hours ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Stackly Core Cluster Headquarters</h3>
+            </div>
+            
+            <!-- Quick simulated map look -->
+            <div style="background-color: var(--bg-main); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+              <i class="fas fa-map-marked-alt" style="font-size: 3.5rem; color: var(--primary); margin-bottom: 16px;"></i>
+              <h4 style="margin-bottom: 8px;">Salem Data Center Node</h4>
+              <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5; margin-bottom: 12px;">MMR Complex, Chinna Thirupathi, near Chinna Muniyappan Kovil, Salem, Tamil Nadu 636008</p>
+              
+              <div style="text-align: left; font-size: 0.8rem; background-color: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 12px; line-height: 1.4;">
+                <div><strong>Admin Scope:</strong> Regional Cluster</div>
+                <div><strong>Support Hotline:</strong> +91 (0) 427 492 849</div>
+                <div><strong>ISP Latency:</strong> 12.8ms (Salem Fiber Core)</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+

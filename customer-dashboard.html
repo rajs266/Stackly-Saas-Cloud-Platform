@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard | Stackly SaaS Cloud Platform</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/webp" href="assets/top-logo.webp">
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Custom Cursor Markup -->
+  <div class="custom-cursor-dot"></div>
+  <div class="custom-cursor-ring"></div>
+
+  <!-- Dashboard Layout -->
+  <div class="dashboard-layout">
+    
+    <!-- Left Sidebar -->
+    <aside class="db-sidebar">
+      <div class="db-sidebar-header">
+        <a href="index.html" class="logo-container">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+        </a>
+      </div>
+      
+      <ul class="db-menu">
+        <li>
+          <a href="customer-dashboard.html" class="db-menu-link active">
+            <i class="fas fa-chart-pie"></i> Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-cubes"></i> My Subscriptions
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-server"></i> Resource Metrics
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-file-invoice-dollar"></i> Billing Logs
+          </a>
+        </li>
+        <li>
+          <a href="404.html" class="db-menu-link">
+            <i class="fas fa-sliders-h"></i> Settings
+          </a>
+        </li>
+        <li style="margin-top: auto;">
+          <a href="index.html" class="db-menu-link" style="color: var(--danger);">
+            <i class="fas fa-sign-out-alt"></i> Sign Out
+          </a>
+        </li>
+      </ul>
+      
+      <div class="db-sidebar-footer">
+        <div class="db-user-mini">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Customer Profile" class="db-user-mini-img">
+          <div class="db-user-mini-info">
+            <h5>Divya Sharma</h5>
+            <p>Customer Account</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Right Main Area -->
+    <main class="db-main">
+      
+      <!-- Topbar -->
+      <header class="db-topbar">
+        <div style="display: flex; align-items: center; gap: 15px;">
+          <button class="sidebar-toggle-btn">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="db-search">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search resources or documents...">
+          </div>
+        </div>
+        
+        <div class="db-topbar-actions">
+          <a href="404.html" class="db-action-btn">
+            <i class="fas fa-bell"></i>
+            <span class="db-badge-dot"></span>
+          </a>
+          <a href="404.html" class="db-action-btn">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="404.html" style="display: flex; align-items: center; gap: 10px;">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Profile" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Content -->
+      <div class="db-content">
+        
+        <!-- Welcome Bar -->
+        <div class="db-welcome-bar">
+          <div>
+            <h2 class="db-welcome-title">Welcome Back, Divya</h2>
+            <p class="db-welcome-subtitle">All cloud systems are operating optimally from the Salem Region cluster.</p>
+          </div>
+          <div>
+            <a href="404.html" class="btn btn-primary">
+              <i class="fas fa-plus"></i> Deploy New VPS
+            </a>
+          </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="db-stats-grid">
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Active Instances</h6>
+              <div class="db-stat-value">14</div>
+              <div class="db-stat-trend up">
+                <i class="fas fa-arrow-up"></i> +12.5% this month
+              </div>
+            </div>
+            <div class="db-stat-icon">
+              <i class="fas fa-server"></i>
+            </div>
+          </div>
+          
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>RAM Allocation</h6>
+              <div class="db-stat-value">58.2 GB</div>
+              <div class="db-stat-trend up">
+                <i class="fas fa-arrow-up"></i> +8.0% growth
+              </div>
+            </div>
+            <div class="db-stat-icon" style="color: var(--secondary); background-color: rgba(6, 182, 212, 0.08);">
+              <i class="fas fa-microchip"></i>
+            </div>
+          </div>
+
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Monthly Spend</h6>
+              <div class="db-stat-value">$142.50</div>
+              <div class="db-stat-trend down">
+                <i class="fas fa-arrow-down"></i> -4.2% optimization
+              </div>
+            </div>
+            <div class="db-stat-icon" style="color: #10b981; background-color: var(--success-glow);">
+              <i class="fas fa-wallet"></i>
+            </div>
+          </div>
+
+          <div class="db-stat-card">
+            <div class="db-stat-info">
+              <h6>Cluster Latency</h6>
+              <div class="db-stat-value">18.4ms</div>
+              <div class="db-stat-trend up" style="color: var(--success);">
+                <i class="fas fa-check"></i> Highly Stable
+              </div>
+            </div>
+            <div class="db-stat-icon" style="color: var(--accent); background-color: rgba(59, 130, 246, 0.08);">
+              <i class="fas fa-tachometer-alt"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Details Rows -->
+        <div class="db-row">
+          
+          <!-- Cloud Instance Management Panel -->
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">My Deployments</h3>
+              <a href="404.html" class="auth-link" style="font-size: 0.85rem; font-weight: 700;">View All</a>
+            </div>
+            
+            <div class="table-wrapper" style="margin-top: 0; box-shadow: none; border: none;">
+              <table class="comparison-table" style="font-size: 0.9rem;">
+                <thead>
+                  <tr>
+                    <th>Instance Name</th>
+                    <th>Node IP</th>
+                    <th>Specs</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <i class="fas fa-terminal" style="color: var(--primary);"></i> Web-Core-01
+                    </td>
+                    <td>103.45.18.29</td>
+                    <td>2 vCPU / 4GB RAM</td>
+                    <td><span class="badge-status active">Active</span></td>
+                    <td>
+                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
+                        Manage
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <i class="fas fa-database" style="color: var(--accent);"></i> DB-Replica-Salem
+                    </td>
+                    <td>103.45.18.35</td>
+                    <td>4 vCPU / 8GB RAM</td>
+                    <td><span class="badge-status active">Active</span></td>
+                    <td>
+                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
+                        Manage
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <i class="fas fa-network-wired" style="color: var(--secondary);"></i> Nginx-LoadBalancer
+                    </td>
+                    <td>103.45.18.12</td>
+                    <td>1 vCPU / 2GB RAM</td>
+                    <td><span class="badge-status active">Active</span></td>
+                    <td>
+                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
+                        Manage
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
+                      <i class="fas fa-folder-open" style="color: var(--text-light);"></i> File-Archive-Temp
+                    </td>
+                    <td>103.45.22.84</td>
+                    <td>1 vCPU / 1GB RAM</td>
+                    <td><span class="badge-status failed">Stopped</span></td>
+                    <td>
+                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
+                        Manage
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Storage Allotment -->
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Resource Quota</h3>
+            </div>
+            
+            <div class="db-progress-group">
+              <div class="db-progress-info">
+                <span class="db-progress-label">Block Storage (120 GB used)</span>
+                <span class="db-progress-val">80%</span>
+              </div>
+              <div class="db-progress-bg">
+                <div class="db-progress-bar" data-value="80%"></div>
+              </div>
+            </div>
+
+            <div class="db-progress-group">
+              <div class="db-progress-info">
+                <span class="db-progress-label">Object Storage (14 GB used)</span>
+                <span class="db-progress-val">28%</span>
+              </div>
+              <div class="db-progress-bg">
+                <div class="db-progress-bar" data-value="28%" style="background: linear-gradient(90deg, var(--secondary) 0%, #10b981 100%);"></div>
+              </div>
+            </div>
+
+            <div class="db-progress-group" style="margin-bottom: 0;">
+              <div class="db-progress-info">
+                <span class="db-progress-label">Virtual Networks (7 / 10 Vnets)</span>
+                <span class="db-progress-val">70%</span>
+              </div>
+              <div class="db-progress-bg">
+                <div class="db-progress-bar" data-value="70%" style="background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Activity Log Rows -->
+        <div class="db-row equal">
+          
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Audit Trail Logs</h3>
+            </div>
+            
+            <div class="db-feed">
+              <div class="db-feed-item">
+                <div class="db-feed-indicator success">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="db-feed-content">
+                  <h5>VPS instance Web-Core-01 rebooted</h5>
+                  <p>Triggered by Divya Sharma via SSH Client API � 10 mins ago</p>
+                </div>
+              </div>
+
+              <div class="db-feed-item">
+                <div class="db-feed-indicator success">
+                  <i class="fas fa-check"></i>
+                </div>
+                <div class="db-feed-content">
+                  <h5>Subscription tier updated</h5>
+                  <p>Tier upgraded to Professional SaaS Core Plan � 2 hours ago</p>
+                </div>
+              </div>
+
+              <div class="db-feed-item">
+                <div class="db-feed-indicator warning">
+                  <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <div class="db-feed-content">
+                  <h5>Storage utilization threshold warning</h5>
+                  <p>Block Storage partition Web-Core-01 has exceeded 80% usage capacity � 1 day ago</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="db-panel">
+            <div class="db-panel-header">
+              <h3 class="db-panel-title">Active Regions</h3>
+            </div>
+            
+            <!-- Quick simulated map look -->
+            <div style="background-color: var(--bg-main); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px; text-align: center;">
+              <i class="fas fa-globe-asia" style="font-size: 3.5rem; color: var(--primary); margin-bottom: 16px;"></i>
+              <h4 style="margin-bottom: 8px;">Salem primary cluster (India)</h4>
+              <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.5;">Your systems are running from MMR Complex, Chinna Thirupathi Node. Latency from Salem region: <strong style="color: var(--success);">18.4 ms</strong>.</p>
+              
+              <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
+                <span style="font-size: 0.8rem; background-color: var(--accent-light); color: var(--primary); padding: 4px 10px; border-radius: 50px; font-weight: 700;">APAC-SOUTH-1A</span>
+                <span style="font-size: 0.8rem; background-color: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); padding: 4px 10px; border-radius: 50px; font-weight: 700;">Healthy</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Script -->
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
