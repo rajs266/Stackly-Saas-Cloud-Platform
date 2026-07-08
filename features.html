@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Capabilities and Features of Stackly SaaS Cloud Platform" />
+
+    <title>Features | Stackly SaaS Cloud Platform</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="assets/top-logo.webp" />
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Custom Cursor Markup -->
+    <div class="custom-cursor-dot"></div>
+    <div class="custom-cursor-ring"></div>
+
+    <!-- Preloader Start -->
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <div class="preloader-rings">
+          <span class="preloader-ring preloader-ring-1"></span>
+          <span class="preloader-ring preloader-ring-2"></span>
+          <span class="preloader-ring preloader-ring-3"></span>
+          <div class="preloader-logo-wrap">
+            <img src="assets/logo.webp" alt="Stackly" class="preloader-logo" />
+          </div>
+        </div>
+        <div class="preloader-progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+          <span class="preloader-progress-bar"></span>
+        </div>
+        <div class="preloader-dots" aria-hidden="true">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+    </div>
+    <!-- Preloader end -->
+
+    <!-- Back to top start -->
+    <div class="back-to-top-wrapper">
+      <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
+        <svg class="back-to-top-progress" viewBox="0 0 56 56" aria-hidden="true">
+          <circle class="back-to-top-track" cx="28" cy="28" r="24"></circle>
+          <circle class="back-to-top-bar" cx="28" cy="28" r="24"></circle>
+        </svg>
+        <span class="back_to_top_icon"><i class="fas fa-arrow-up"></i></span>
+      </button>
+    </div>
+    <!-- Back to top end -->
+
+    <!-- start: Search Popup -->
+    <div class="search_popup">
+      <div class="search_close">
+        <button type="button" class="search_close_btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="search-box">
+              <input class="search-input-field" type="search" placeholder="Search projects, nodes, or database logs..." required />
+              <button type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end: Search Popup -->
+
+        <!-- start: Offcanvas Menu -->
+    <div class="tj-offcanvas-area">
+      <div class="offcanvas-header">
+        <a href="index.html" class="logo-container">
+          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+        </a>
+        <button type="button" class="hamburger_close_btn" aria-label="Close menu">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <nav class="offcanvas-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="service.html">Services</a></li>
+          <li><a href="features.html">Features</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="offcanvas-actions">
+        <a class="offcanvas-signin-btn" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+        <a class="tj-primary-btn offcanvas-cta-btn" href="getstarted.html">
+          <span class="btn-text">Get Started</span>
+          <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+        </a>
+      </div>
+    </div>
+    <div class="hamburger_bg"></div>
+    <!-- end: Offcanvas Menu -->
+
+    <!-- start: Header Area -->
+    <header class="header-area header-dark">
+      <div class="header-wrapper">
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav id="mobile-menu" class="mainmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html" class="active">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- start: Header Area (Sticky duplicate) -->
+    <header class="header-area header-duplicate header-sticky">
+      <div class="header-wrapper">
+        <div class="site_logo">
+          <a class="logo-container" href="index.html">
+            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+
+        <div class="menu-area d-none d-lg-inline-flex align-items-center">
+          <nav class="mainmenu">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html" class="active">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+
+            </ul>
+          </nav>
+        </div>
+
+        <div class="header-right-item d-none d-lg-inline-flex">
+          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
+          <div class="header-button">
+            <a class="tj-primary-btn" href="getstarted.html">
+              <span class="btn-text">Get Started</span>
+              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
+            </a>
+          </div>
+        </div>
+
+                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
+          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
+          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
+        </button>
+      </div>
+    </header>
+    <!-- end: Header Area -->
+
+    <!-- Main Content -->
+    <main>
+      <!-- Features Hero Section -->
+      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1920&q=80');">
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Core Capabilities</span>
+            <h1 class="section-title split-text">High-Availability <span>Platform Features</span></h1>
+            <p class="section-desc">Stackly is engineered with deep layer network routing, instant resource provisioning, and cluster security parameters built in.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Grid Details -->
+      <section class="section-light">
+        <div class="container">
+          <div class="dashboard-container">
+            <!-- Left side stats mockups -->
+            <div class="dashboard-visual reveal reveal-left">
+              <div class="dashboard-header-bar">
+                <div class="dot-group">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <div class="dashboard-title-bar">System Health Monitor</div>
+              </div>
+              
+              <div class="stats-grid">
+                <div class="stat-item">
+                  <div class="stat-num">98.4%</div>
+                  <div class="stat-label">Active Host Capacity</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-num">12ms</div>
+                  <div class="stat-label">BGP Routing Peer Speed</div>
+                </div>
+              </div>
+
+              <div class="chart-mockup">
+                <h4 style="font-size: 0.95rem; margin-bottom: 12px; color: var(--text-muted);">Allocated CPU Core Efficiency</h4>
+                <div class="chart-bar-group">
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                  <div class="chart-bar"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right side features list details -->
+            <div class="reveal reveal-right">
+              <h2 style="font-family: var(--font-display); font-size: 2.25rem; margin-bottom: 30px; line-height: 1.3;">Everything needed to run scalable clusters</h2>
+              
+              <div style="margin-bottom: 30px;">
+                <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; font-size: 1.25rem;"><i class="fas fa-bolt" style="color: var(--primary);"></i> Sub-20ms Latency Peering</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem; padding-left: 26px; line-height: 1.6;">By placing primary host clusters inside localized network exchanges (such as Salem APAC node), client applications access microservices with sub-20ms pings, providing smooth SaaS interactions.</p>
+              </div>
+
+              <div style="margin-bottom: 30px;">
+                <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; font-size: 1.25rem;"><i class="fas fa-history" style="color: var(--secondary);"></i> Hot Standby Node Failovers</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem; padding-left: 26px; line-height: 1.6;">Database and compute volumes are synced in real-time. If a main host encounters network failure, traffic is immediately rerouted to a hot standby instance in the cluster.</p>
+              </div>
+
+              <div style="margin-bottom: 0;">
+                <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px; font-size: 1.25rem;"><i class="fas fa-shield-virus" style="color: var(--accent);"></i> Firewall Security Shield</h4>
+                <p style="color: var(--text-muted); font-size: 0.95rem; padding-left: 26px; line-height: 1.6;">Mitigate traffic spikes and DDoS request injections at the edge. Stackly blocks unauthorized requests before they consume your host's bandwidth quota.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Developer API Showcase Section -->
+      <section class="section-padding">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal reveal-left">
+              <span class="section-subtitle">Developer Experience</span>
+              <h2 class="section-title">Built for <span>Engineers</span></h2>
+              <p class="section-desc">Provision clusters, manage DNS records, and configure firewalls directly from your terminal. Our RESTful API is designed with sensible defaults and comprehensive documentation.</p>
+              <div style="margin-top: 32px;">
+                <a href="404.html" class="tj-primary-btn"><span class="btn-text">View API Docs</span></a>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal reveal-right">
+              <div style="background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 20px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+                <div style="display: flex; gap: 8px; margin-bottom: 20px;">
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #ef4444;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #eab308;"></div>
+                  <div style="width: 12px; height: 12px; border-radius: 50%; background: #22c55e;"></div>
+                </div>
+                <div class="typewriter-container" style="color: #a5b4fc; font-size: 0.95rem; line-height: 1.8;">
+                  <span style="color: #38bdf8;">$</span> curl -X POST https://api.stackly.com/v1/clusters \<br>
+                  &nbsp;&nbsp;-H "Authorization: Bearer $STACKLY_TOKEN" \<br>
+                  &nbsp;&nbsp;-d '{<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"name": "production-api-node",<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"region": "ap-south-1",<br>
+                  &nbsp;&nbsp;&nbsp;&nbsp;"size": "s-4vcpu-8gb"<br>
+                  &nbsp;&nbsp;}'<br>
+                  <br>
+                  <span style="color: #22c55e;">> { "status": "deploying", "id": "cls_9x8d7..." }</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive Feature Tabs Section -->
+      <section class="section-padding" style="padding: 80px 0; background-color: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+        <div class="container">
+          <div class="section-header text-center reveal zoom-in" style="max-width: 600px; margin: 0 auto 40px;">
+            <h2 class="section-title">Solutions for <span>Every Stage</span></h2>
+          </div>
+          
+          <div class="feature-tabs-nav reveal reveal-up">
+            <button class="feature-tab-btn active" onclick="openTab(event, 'tab-startup')">For Startups</button>
+            <button class="feature-tab-btn" onclick="openTab(event, 'tab-enterprise')">For Enterprises</button>
+            <button class="feature-tab-btn" onclick="openTab(event, 'tab-agency')">For Agencies</button>
+          </div>
+          
+          <div class="reveal reveal-up delay-100">
+            <div id="tab-startup" class="feature-tab-content active text-center" style="max-width: 800px; margin: 0 auto;">
+              <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 20px;">Launch fast with zero ops</h3>
+              <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Don't waste early runway hiring DevOps engineers. Stackly's PaaS offering automatically builds and deploys your code from GitHub in minutes. Scale seamlessly when your first big launch goes viral.</p>
+            </div>
+            
+            <div id="tab-enterprise" class="feature-tab-content text-center" style="max-width: 800px; margin: 0 auto;">
+              <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 20px;">Compliance and Control</h3>
+              <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Dedicated VPCs, hardware-level isolation, and custom SLA agreements. Designed to meet the stringent security, auditing, and compliance requirements of modern enterprise architectures.</p>
+            </div>
+            
+            <div id="tab-agency" class="feature-tab-content text-center" style="max-width: 800px; margin: 0 auto;">
+              <h3 style="font-family: var(--font-display); font-size: 2rem; margin-bottom: 20px;">Manage multiple clients easily</h3>
+              <p style="color: var(--text-muted); font-size: 1.1rem; line-height: 1.6;">Create isolated team workspaces with separate billing profiles for each of your clients. Easily transfer project ownership when development is complete, with white-label options available.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        function openTab(evt, tabId) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("feature-tab-content");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+            tabcontent[i].classList.remove("active");
+          }
+          tablinks = document.getElementsByClassName("feature-tab-btn");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(tabId).style.display = "block";
+          document.getElementById(tabId).classList.add("active");
+          evt.currentTarget.className += " active";
+        }
+      </script>
+
+      <!-- Enterprise Security Section -->
+      <section class="section-padding" style="padding: 80px 0; background-color: rgba(255, 255, 255, 0.02);">
+        <div class="container">
+          <div class="row align-items-center g-5 flex-lg-row-reverse">
+            <div class="col-lg-6 reveal reveal-right">
+              <span class="section-subtitle">Zero-Trust Architecture</span>
+              <h2 class="section-title">Enterprise-Grade <span>Security</span> Shield</h2>
+              <p class="section-desc">Protect your infrastructure from Layer 3 to Layer 7. Our platform inherently builds a zero-trust network environment where microservices authenticate strictly using mTLS certificates.</p>
+              <ul class="check-list" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0;">
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Automated DDoS mitigation protocols.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> End-to-end encryption at rest and in transit.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Native SOC2 Type II and GDPR compliance logging.</li>
+              </ul>
+              <div style="margin-top: 32px;">
+                <a href="404.html" class="tj-primary-btn"><span class="btn-text">Read Security Whitepaper</span></a>
+              </div>
+            </div>
+            <div class="col-lg-6 reveal reveal-left">
+              <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=800&q=80" alt="Cybersecurity Architecture" style="border-radius: var(--radius-lg); width: 100%; border: 1px solid var(--border);" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Intelligent Auto-Scaling Section -->
+      <section class="section-padding" style="padding: 80px 0;">
+        <div class="container">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal reveal-left">
+              <span class="section-subtitle">Elastic Compute</span>
+              <h2 class="section-title">Intelligent <span>Auto-Scaling</span></h2>
+              <p class="section-desc">Never over-provision servers again. Our machine-learning driven load balancers monitor CPU, RAM, and network bandwidth in real-time, instantly spawning clone nodes when thresholds are breached.</p>
+              <ul class="check-list" style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px; list-style: none; padding: 0;">
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Scale from 1 to 10,000 nodes in under 4 seconds.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Predictive scaling based on historical traffic patterns.</li>
+                <li><i class="fas fa-check-circle" style="color: var(--primary); margin-right: 8px;"></i> Granular budget caps to prevent billing surprises.</li>
+              </ul>
+            </div>
+            <div class="col-lg-6 reveal reveal-right">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Server Auto-scaling Performance" style="border-radius: var(--radius-lg); width: 100%; box-shadow: 0 20px 40px rgba(0,0,0,0.3);" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pricing Table Section -->
+      <section>
+        <div class="container">
+          <div class="section-header reveal zoom-in">
+            <span class="section-subtitle">Specs Matrix</span>
+            <h2 class="section-title">Compare <span>Platform Tiers</span></h2>
+            <p class="section-desc">Select the SaaS cluster configuration that fits your scaling demands.</p>
+          </div>
+
+          <div class="reveal reveal-up" style="background-color: var(--bg-card); border: 1.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm);">
+            <div class="table-responsive">
+              <table class="table" style="margin-bottom: 0; vertical-align: middle; font-size: 0.95rem;">
+                <thead style="background-color: var(--bg-main); font-family: var(--font-display); font-weight: 700; border-bottom: 1.5px solid var(--border);">
+                  <tr>
+                    <th style="padding: 20px 24px;">Compare Features</th>
+                    <th style="padding: 20px 24px;">Lite Tier</th>
+                    <th style="padding: 20px 24px;">Professional Tier</th>
+                    <th style="padding: 20px 24px;">Enterprise Tier</th>
+                  </tr>
+                </thead>
+                <tbody style="color: var(--text-muted);">
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: 1px solid var(--border);">Compute Cores</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">1 vCPU Core</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">4 vCPU Cores</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">Dedicated Host (Node)</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: 1px solid var(--border);">RAM Storage Pool</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">2 GB RAM / 25GB SSD</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">8 GB RAM / 120GB NVMe</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">Unlimited Custom Pool</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: 1px solid var(--border);">SLA Guarantee</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">99.9% Availability</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">99.99% Network SLA</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">99.999% Dedicated SLA</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: 1px solid var(--border);">DDoS Security Shield</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: 1px solid var(--border);"><i class="fas fa-check-circle"></i> Included</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: 1px solid var(--border);"><i class="fas fa-check-circle"></i> Included</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: 1px solid var(--border);"><i class="fas fa-check-circle"></i> Custom Firewall</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: 1px solid var(--border);">Auto-scaling nodes</td>
+                    <td style="color: var(--danger); padding: 18px 24px; border-bottom: 1px solid var(--border);"><i class="fas fa-times-circle"></i> Not Available</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: 1px solid var(--border);"><i class="fas fa-check-circle"></i> Auto Scale</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: 1px solid var(--border);"><i class="fas fa-check-circle"></i> Multi-Node Auto</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: 1px solid var(--border);">Support SLA</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">Email Support</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">24/7 Slack / Phone</td>
+                    <td style="padding: 18px 24px; border-bottom: 1px solid var(--border);">Dedicated Engineer Panel</td>
+                  </tr>
+                  <tr>
+                    <td style="font-weight: 700; color: var(--text-main); padding: 18px 24px; border-bottom: none;">Salem HQ Edge Node</td>
+                    <td style="color: var(--danger); padding: 18px 24px; border-bottom: none;"><i class="fas fa-times-circle"></i> Not Available</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: none;"><i class="fas fa-check-circle"></i> Enabled</td>
+                    <td style="color: var(--success); padding: 18px 24px; border-bottom: none;"><i class="fas fa-check-circle"></i> Full Priority Node</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-newsletter reveal reveal-up">
+          <div class="footer-newsletter-text">
+            <h3>Subscribe to Stackly Updates</h3>
+            <p>Get product releases, SLA notices, and cloud engineering guides in your inbox.</p>
+          </div>
+          <form class="footer-subscribe-form" action="404.html">
+            <input type="email" placeholder="Enter your email..." required />
+            <button type="submit" class="tj-primary-btn"><span class="btn-text">Subscribe</span></button>
+          </form>
+        </div>
+        <div class="footer-grid">
+          <div class="footer-about">
+            <div class="logo-container">
+              <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
+            </div>
+            <p class="footer-about-desc">Ultimate SaaS Cloud and Dedicated Cluster Platform engineered for high-availability performance. Join 10,000+ developers scaling their infrastructure with us.</p>
+            <div class="social-links">
+              <a href="404.html" class="social-icon"><i class="fab fa-x-twitter"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+              <a href="404.html" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Platform</h4>
+            <ul class="footer-links">
+              <li><a href="404.html">Core Features</a></li>
+              <li><a href="404.html">SaaS Solutions</a></li>
+              <li><a href="404.html">Security Shield</a></li>
+              <li><a href="404.html">API Reference</a></li>
+              <li><a href="404.html">Global Network</a></li>
+              <li><a href="404.html">Pricing Plans</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="service.html">Services</a></li>
+              <li><a href="features.html">Features</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-title">Salem HQ Node</h4>
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <span>+91 (0) 427 492 849</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>support@stacklycloud.com</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-clock"></i>
+              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Stackly Labs. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="404.html">Privacy Policy</a>
+            <a href="404.html">Terms of Service</a>
+            <a href="404.html">SLA Commitment</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
+
+
+
+
+
