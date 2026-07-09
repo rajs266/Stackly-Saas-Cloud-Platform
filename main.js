@@ -804,7 +804,7 @@ function initDashboardStubButtons() {
   if (!document.body.classList.contains('dashboard-page')) return;
 
   document.querySelectorAll('.dashboard-page button').forEach((btn) => {
-    if (btn.id === 'logoutBtn' || btn.id === 'dashboardMenuToggle') return;
+    if (btn.id === 'logoutBtn' || btn.id === 'dashboardMenuToggle' || btn.closest('.logout-modal-box')) return;
     if (btn.closest('.custom-select-wrapper')) return;
 
     btn.addEventListener('click', (e) => {
@@ -888,8 +888,14 @@ function initFormsAndAuth() {
       const emailGroup = document.getElementById('emailGroup');
       const passwordGroup = document.getElementById('passwordGroup');
 
+      const fullNameErrorMsg = nameGroup?.querySelector('.error-message');
       if (!fullName) {
         nameGroup?.classList.add('has-error');
+        if (fullNameErrorMsg) fullNameErrorMsg.textContent = 'Please enter your full name.';
+        isValid = false;
+      } else if (!validateName(fullName)) {
+        nameGroup?.classList.add('has-error');
+        if (fullNameErrorMsg) fullNameErrorMsg.textContent = 'Name contains only alphabets';
         isValid = false;
       } else {
         nameGroup?.classList.remove('has-error');
@@ -928,6 +934,24 @@ function initFormsAndAuth() {
         window.location.href = (role === 'admin') ? 'admin-dashboard.html' : 'customer-dashboard.html';
       }, 1500);
     });
+
+    const fullNameEl = document.getElementById('fullName');
+    if (fullNameEl) {
+      fullNameEl.addEventListener('blur', function() {
+        const val = this.value.trim();
+        const group = document.getElementById('nameGroup');
+        const errorMsg = group?.querySelector('.error-message');
+        if (val && !validateName(val)) {
+          group?.classList.add('has-error');
+          if (errorMsg) errorMsg.textContent = 'Name contains only alphabets';
+        } else if (!val) {
+          group?.classList.add('has-error');
+          if (errorMsg) errorMsg.textContent = 'Please enter your full name.';
+        } else {
+          group?.classList.remove('has-error');
+        }
+      });
+    }
 
     const emailEl = document.getElementById('email');
     if (emailEl) {
@@ -1372,13 +1396,33 @@ function initDashboardPage() {
     activateSection(previous, { storePrevious: false });
   });
 
-  logoutBtn?.addEventListener('click', () => {
+  const logoutModal = document.getElementById('logoutModal');
+  const logoutCancelBtn = document.getElementById('logoutCancelBtn');
+  const logoutConfirmBtn = document.getElementById('logoutConfirmBtn');
+
+  function executeLogout() {
     localStorage.removeItem('stackly_user');
     sessionStorage.removeItem('stackly_user');
     sessionStorage.removeItem(sectionKey);
     sessionStorage.removeItem(prevKey);
     sessionStorage.removeItem(returnKey);
     window.location.replace('signin.html');
+  }
+
+  logoutBtn?.addEventListener('click', () => {
+    if (logoutModal) {
+      logoutModal.classList.add('active');
+    } else if (window.confirm('Are you sure you want to log out?')) {
+      executeLogout();
+    }
+  });
+
+  logoutCancelBtn?.addEventListener('click', () => {
+    logoutModal?.classList.remove('active');
+  });
+
+  logoutConfirmBtn?.addEventListener('click', () => {
+    executeLogout();
   });
 
   document.addEventListener('click', (e) => {
