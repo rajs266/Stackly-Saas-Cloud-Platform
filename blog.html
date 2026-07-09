@@ -8,21 +8,18 @@
 
     <title>Blog | Stackly SaaS Cloud Platform</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/webp" href="assets/top-logo.webp" />
 
-    <!-- CSS here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <body>
-    <!-- Custom Cursor Markup -->
+    
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-ring"></div>
 
-    <!-- Preloader Start -->
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader-inner">
         <div class="preloader-rings">
@@ -41,9 +38,7 @@
         </div>
       </div>
     </div>
-    <!-- Preloader end -->
 
-    <!-- Back to top start -->
     <div class="back-to-top-wrapper">
       <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
         <svg class="back-to-top-progress" viewBox="0 0 56 56" aria-hidden="true">
@@ -53,9 +48,7 @@
         <span class="back_to_top_icon"><i class="fas fa-arrow-up"></i></span>
       </button>
     </div>
-    <!-- Back to top end -->
 
-    <!-- start: Search Popup -->
     <div class="search_popup">
       <div class="search_close">
         <button type="button" class="search_close_btn">
@@ -75,9 +68,7 @@
         </div>
       </div>
     </div>
-    <!-- end: Search Popup -->
 
-        <!-- start: Offcanvas Menu -->
     <div class="tj-offcanvas-area">
       <div class="offcanvas-header">
         <a href="index.html" class="logo-container">
@@ -99,16 +90,14 @@
       </nav>
       <div class="offcanvas-actions">
         <a class="offcanvas-signin-btn" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
-        <a class="tj-primary-btn offcanvas-cta-btn" href="getstarted.html">
+        <a class="tj-primary-btn offcanvas-cta-btn" href="signup.html">
           <span class="btn-text">Get Started</span>
           <span class="btn-icon"><i class="fas fa-rocket"></i></span>
         </a>
       </div>
     </div>
     <div class="hamburger_bg"></div>
-    <!-- end: Offcanvas Menu -->
 
-    <!-- start: Header Area -->
     <header class="header-area header-dark">
       <div class="header-wrapper">
         <div class="site_logo">
@@ -134,7 +123,7 @@
         <div class="header-right-item d-none d-lg-inline-flex">
           <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
           <div class="header-button">
-            <a class="tj-primary-btn" href="getstarted.html">
+            <a class="tj-primary-btn" href="signup.html">
               <span class="btn-text">Get Started</span>
               <span class="btn-icon"><i class="fas fa-rocket"></i></span>
             </a>
@@ -147,9 +136,7 @@
         </button>
       </div>
     </header>
-    <!-- end: Header Area -->
 
-    <!-- start: Header Area (Sticky duplicate) -->
     <header class="header-area header-duplicate header-sticky">
       <div class="header-wrapper">
         <div class="site_logo">
@@ -175,7 +162,7 @@
         <div class="header-right-item d-none d-lg-inline-flex">
           <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
           <div class="header-button">
-            <a class="tj-primary-btn" href="getstarted.html">
+            <a class="tj-primary-btn" href="signup.html">
               <span class="btn-text">Get Started</span>
               <span class="btn-icon"><i class="fas fa-rocket"></i></span>
             </a>
@@ -188,12 +175,10 @@
         </button>
       </div>
     </header>
-    <!-- end: Header Area -->
 
-    <!-- Main Content -->
     <main>
-      <!-- Blog Hero Section -->
-      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80');">
+      
+      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('assets/img-ext-16.webp');">
         <div class="container">
           <div class="section-header reveal zoom-in">
             <span class="section-subtitle">Insights</span>
@@ -203,13 +188,12 @@
         </div>
       </section>
 
-      <!-- Trending Featured Article -->
       <section class="section-padding" style="padding-top: 60px;">
         <div class="container">
           <div class="row align-items-center g-0" style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border);">
             <div class="col-lg-7 p-0">
-              <div class="hover-zoom-reveal" style="height: 100%; min-height: 400px; border-radius: 0;">
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Server Analytics" style="width: 100%; height: 100%; object-fit: cover;" />
+              <div class="hover-zoom-reveal featured-article-img" style="border-radius: 0;">
+                <img src="assets/img-ext-12.webp" alt="Server Analytics" style="width: 100%; height: 100%; object-fit: cover;" />
                 <div class="reveal-content">
                   <span class="blog-tag" style="background: var(--primary); color: #fff; border-color: var(--primary);">Featured</span>
                   <h2 style="color: #fff; margin-top: 15px; font-family: var(--font-display);">The Future of Serverless Architecture in 2027</h2>
@@ -221,31 +205,29 @@
               <span class="blog-date">July 12, 2026</span>
               <h3 style="font-family: var(--font-display); font-size: 1.8rem; margin: 15px 0;">Why we rebuilt our core engine in Rust</h3>
               <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 30px;">Memory safety and zero-cost abstractions allowed us to handle 3x more concurrent connections on the same hardware. Here's a technical deep dive.</p>
-              <a href="404.html" class="tj-primary-btn"><span class="btn-text">Read Full Story</span></a>
+              <a href="404.html" class="tj-primary-btn btn-simple" style="justify-content: center;"><span class="btn-text">Read Full Story</span></a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Floating Topics / Categories Cloud -->
       <section class="section-padding" style="padding: 40px 0;">
         <div class="container text-center">
           <h4 style="color: var(--text-muted); margin-bottom: 30px; font-weight: 500;">Explore Topics</h4>
           <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px;">
-            <a href="404.html" class="blog-tag animate-float" style="padding: 10px 20px; font-size: 1.1rem;">Cloud Architecture</a>
-            <a href="404.html" class="blog-tag animate-float-delay" style="padding: 10px 20px; font-size: 1.1rem; border-color: var(--secondary); color: var(--secondary);">DevOps</a>
-            <a href="404.html" class="blog-tag animate-float" style="padding: 10px 20px; font-size: 1.1rem; border-color: #10b981; color: #10b981;">Kubernetes</a>
-            <a href="404.html" class="blog-tag animate-float-delay" style="padding: 10px 20px; font-size: 1.1rem; border-color: var(--accent); color: var(--accent);">Zero-Trust</a>
-            <a href="404.html" class="blog-tag animate-float" style="padding: 10px 20px; font-size: 1.1rem;">Serverless Edge</a>
-            <a href="404.html" class="blog-tag animate-float-delay" style="padding: 10px 20px; font-size: 1.1rem; border-color: #f59e0b; color: #f59e0b;">Rust Engineering</a>
+            <a href="404.html" class="topic-tag">Cloud Architecture</a>
+            <a href="404.html" class="topic-tag" style="border-color: var(--secondary); color: var(--secondary);">DevOps</a>
+            <a href="404.html" class="topic-tag" style="border-color: #10b981; color: #10b981;">Kubernetes</a>
+            <a href="404.html" class="topic-tag" style="border-color: var(--accent); color: var(--accent);">Zero-Trust</a>
+            <a href="404.html" class="topic-tag">Serverless Edge</a>
+            <a href="404.html" class="topic-tag" style="border-color: #f59e0b; color: #f59e0b;">Rust Engineering</a>
           </div>
         </div>
       </section>
 
-      <!-- Blog Filters & Grid -->
       <section class="section-light">
         <div class="container">
-          <!-- Filter Buttons -->
+          
           <div class="blog-filters reveal zoom-in">
             <button class="filter-btn active" data-filter="all">All Articles</button>
             <button class="filter-btn" data-filter="cloudserver">Cloud Server</button>
@@ -253,12 +235,11 @@
             <button class="filter-btn" data-filter="edgepeering">Edge Peering</button>
           </div>
 
-          <!-- Blog Grid -->
           <div class="blog-grid">
-            <!-- Post 1 -->
+            
             <article class="blog-card reveal reveal-left" data-category="cloudserver">
               <div class="blog-img-box img-reveal">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780efad99a?auto=format&fit=crop&w=600&q=80" alt="Automated server clusters abstract networks" />
+                <img src="assets/img-ext-17.webp" alt="Automated server clusters abstract networks" />
                 <span class="blog-tag">Cloud Server</span>
               </div>
               <div class="blog-info">
@@ -267,7 +248,7 @@
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">Manual configurations often lead to port conflicts and sub-optimal load paths. Automated provisioning guarantees template compliance across all clusters.</p>
                 <div class="blog-meta">
                   <div class="blog-author">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80" alt="Rajesh Kumar Profile" class="blog-author-img" />
+                    <img src="assets/img-ext-5.webp" alt="Rajesh Kumar Profile" class="blog-author-img" />
                     <span>Rajesh Kumar</span>
                   </div>
                   <span>6 min read</span>
@@ -275,10 +256,9 @@
               </div>
             </article>
 
-            <!-- Post 2 -->
             <article class="blog-card reveal reveal-up" data-category="clustersecurity">
               <div class="blog-img-box img-reveal">
-                <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=600&q=80" alt="Cybersecurity binary logic code" />
+                <img src="assets/img-ext-18.webp" alt="Cybersecurity binary logic code" />
                 <span class="blog-tag">Cluster Security</span>
               </div>
               <div class="blog-info">
@@ -287,7 +267,7 @@
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">DDoS and request flooding mitigations must occur before hitting active VM environments. Shield nodes drop unwanted request packages at the outer router.</p>
                 <div class="blog-meta">
                   <div class="blog-author">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Priya Nair Profile" class="blog-author-img" />
+                    <img src="assets/img-ext-19.webp" alt="Priya Nair Profile" class="blog-author-img" />
                     <span>Priya Nair</span>
                   </div>
                   <span>8 min read</span>
@@ -295,10 +275,9 @@
               </div>
             </article>
 
-            <!-- Post 3 -->
             <article class="blog-card reveal reveal-right" data-category="edgepeering">
               <div class="blog-img-box img-reveal">
-                <img src="https://images.unsplash.com/photo-1680814907495-d2a6a16c1b3f?auto=format&fit=crop&w=600&q=80" alt="Data center router pathways" />
+                <img src="assets/img-ext-20.webp" alt="Data center router pathways" />
                 <span class="blog-tag">Edge Peering</span>
               </div>
               <div class="blog-info">
@@ -307,7 +286,7 @@
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">Real-world latency evaluations between Salem nodes and APAC-East edges. Peering directly with regional network exchanges reduces ping delays by 40%.</p>
                 <div class="blog-meta">
                   <div class="blog-author">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Amit Patel Profile" class="blog-author-img" />
+                    <img src="assets/img-ext-4.webp" alt="Amit Patel Profile" class="blog-author-img" />
                     <span>Amit Patel</span>
                   </div>
                   <span>5 min read</span>
@@ -315,10 +294,9 @@
               </div>
             </article>
 
-            <!-- Post 4 -->
             <article class="blog-card reveal reveal-left" data-category="cloudserver">
               <div class="blog-img-box img-reveal">
-                <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Cloud Network Traffic" />
+                <img src="assets/img-ext-21.webp" alt="Cloud Network Traffic" />
                 <span class="blog-tag">Cloud Server</span>
               </div>
               <div class="blog-info">
@@ -327,7 +305,7 @@
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">A deep dive into persistent volumes and external state stores to allow your traditionally stateful apps to survive pod evictions gracefully.</p>
                 <div class="blog-meta">
                   <div class="blog-author">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Divya Sharma Profile" class="blog-author-img" />
+                    <img src="assets/img-ext-19.webp" alt="Divya Sharma Profile" class="blog-author-img" />
                     <span>Divya Sharma</span>
                   </div>
                   <span>7 min read</span>
@@ -335,10 +313,9 @@
               </div>
             </article>
 
-            <!-- Post 5 -->
             <article class="blog-card reveal reveal-up" data-category="clustersecurity">
               <div class="blog-img-box img-reveal">
-                <img src="https://images.unsplash.com/photo-1563206767-5b18f218e8de?auto=format&fit=crop&w=600&q=80" alt="Security Locks on Code" />
+                <img src="assets/img-ext-22.webp" alt="Security Locks on Code" />
                 <span class="blog-tag">Cluster Security</span>
               </div>
               <div class="blog-info">
@@ -347,7 +324,7 @@
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">Leaked keys account for 60% of modern breaches. Learn how to automate your secret rotations using Vault and our native IAM integrations.</p>
                 <div class="blog-meta">
                   <div class="blog-author">
-                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="Priya Nair Profile" class="blog-author-img" />
+                    <img src="assets/img-ext-3.webp" alt="Priya Nair Profile" class="blog-author-img" />
                     <span>Priya Nair</span>
                   </div>
                   <span>9 min read</span>
@@ -355,10 +332,9 @@
               </div>
             </article>
 
-            <!-- Post 6 -->
             <article class="blog-card reveal reveal-right" data-category="edgepeering">
               <div class="blog-img-box img-reveal">
-                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=600&q=80" alt="Fiber Optic Wires" />
+                <img src="assets/img-ext-23.webp" alt="Fiber Optic Wires" />
                 <span class="blog-tag">Edge Peering</span>
               </div>
               <div class="blog-info">
@@ -367,7 +343,7 @@
                 <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; line-height: 1.6;">How we utilize BGP Anycast to broadcast the same IP address from multiple locations, automatically routing users to their nearest server rack.</p>
                 <div class="blog-meta">
                   <div class="blog-author">
-                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=100&q=80" alt="Rajesh Kumar Profile" class="blog-author-img" />
+                    <img src="assets/img-ext-5.webp" alt="Rajesh Kumar Profile" class="blog-author-img" />
                     <span>Rajesh Kumar</span>
                   </div>
                   <span>4 min read</span>
@@ -378,23 +354,27 @@
         </div>
       </section>
 
-      <!-- Featured Newsletter Section -->
-      <section class="section-padding page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1920&q=80'); padding: 100px 0;">
+      <section class="section-padding page-hero-bg" style="--page-hero-bg: url('assets/img-ext-24.webp'); padding: 100px 0;">
         <div class="container text-center">
           <div class="section-header reveal zoom-in" style="max-width: 600px; margin: 0 auto;">
-            <span class="section-subtitle">Stay Updated</span>
-            <h2 class="section-title">Subscribe to our <span>Dev Newsletter</span></h2>
-            <p class="section-desc" style="color: var(--text-body-dark);">Join 50,000+ developers receiving weekly insights on cloud architecture, security updates, and open-source tooling.</p>
+            <span class="section-subtitle">Developer Community</span>
+            <h2 class="section-title">Join the <span>Conversation</span></h2>
+            <p class="section-desc" style="color: var(--text-body-dark);">Connect with thousands of developers building the future of cloud infrastructure. Get help, share your projects, and collaborate.</p>
           </div>
-          <form class="footer-subscribe-form reveal reveal-up" action="404.html" style="max-width: 500px; margin: 40px auto 0;">
-            <input type="email" placeholder="Enter your work email" required style="width: 100%; padding: 14px 20px; border-radius: var(--radius-sm); border: none; outline: none; margin-bottom: 16px; font-family: var(--font-body);" />
-            <button type="submit" class="tj-primary-btn" style="width: 100%; justify-content: center;"><span class="btn-text">Subscribe Now</span></button>
-          </form>
+          <div class="reveal reveal-up" style="margin-top: 40px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="404.html" class="tj-primary-btn" style="background-color: #5865F2; border-color: #5865F2;">
+              <span class="btn-text">Join our Discord</span>
+              <span class="btn-icon"><i class="fab fa-discord"></i></span>
+            </a>
+            <a href="404.html" class="tj-primary-btn btn-secondary">
+              <span class="btn-text">Read Documentation</span>
+              <span class="btn-icon"><i class="fas fa-book"></i></span>
+            </a>
+          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer Component -->
     <footer class="footer">
       <div class="container">
         <div class="footer-newsletter reveal reveal-up">
@@ -404,14 +384,14 @@
           </div>
           <form class="footer-subscribe-form" action="404.html">
             <input type="email" placeholder="Enter your email..." required />
-            <button type="submit" class="tj-primary-btn"><span class="btn-text">Subscribe</span></button>
+            <button type="submit" class="tj-primary-btn btn-simple" style="justify-content: center;"><span class="btn-text">Subscribe</span></button>
           </form>
         </div>
         <div class="footer-grid">
           <div class="footer-about">
-            <div class="logo-container">
+            <a href="index.html" class="logo-container">
               <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
-            </div>
+            </a>
             <p class="footer-about-desc">Ultimate SaaS Cloud and Dedicated Cluster Platform engineered for high-availability performance. Join 10,000+ developers scaling their infrastructure with us.</p>
             <div class="social-links">
               <a href="404.html" class="social-icon"><i class="fab fa-x-twitter"></i></a>
@@ -476,13 +456,8 @@
       </div>
     </footer>
 
-    <!-- JS here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
-
-
-
-
 

@@ -3,364 +3,482 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer Dashboard | Stackly SaaS Cloud Platform</title>
-  <!-- Favicon -->
+  <title>Customer Hub | Stackly SaaS Cloud Platform</title>
   <link rel="icon" type="image/webp" href="assets/top-logo.webp">
-  <!-- Fonts & Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <!-- Custom Cursor Markup -->
+<body class="dashboard-page dashboard-page--customer">
   <div class="custom-cursor-dot"></div>
   <div class="custom-cursor-ring"></div>
 
-  <!-- Dashboard Layout -->
-  <div class="dashboard-layout">
-    
-    <!-- Left Sidebar -->
-    <aside class="db-sidebar">
-      <div class="db-sidebar-header">
-        <a href="index.html" class="logo-container">
-          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
-        </a>
+  <div class="dashboard-layout dashboard-shell" data-dashboard-page="customer" data-default-section="dashboard">
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <header class="db-topbar dashboard-topbar">
+      <div class="dashboard-topbar-brand">
+        <div class="dashboard-logo-zone">
+          <a href="index.html" class="logo-container dashboard-logo-link">
+            <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img">
+          </a>
+        </div>
+        <div class="dashboard-topbar-divider"></div>
+        <div class="dashboard-topbar-meta">
+          <div class="dashboard-topbar-title" id="dashboardTopbarTitle">Customer Hub</div>
+          <div class="dashboard-topbar-breadcrumb" id="dashboardTopbarBreadcrumb">Customer / Dashboard</div>
+        </div>
       </div>
-      
-      <ul class="db-menu">
-        <li>
-          <a href="customer-dashboard.html" class="db-menu-link active">
-            <i class="fas fa-chart-pie"></i> Dashboard
-          </a>
-        </li>
-        <li>
-          <a href="404.html" class="db-menu-link">
-            <i class="fas fa-cubes"></i> My Subscriptions
-          </a>
-        </li>
-        <li>
-          <a href="404.html" class="db-menu-link">
-            <i class="fas fa-server"></i> Resource Metrics
-          </a>
-        </li>
-        <li>
-          <a href="404.html" class="db-menu-link">
-            <i class="fas fa-file-invoice-dollar"></i> Billing Logs
-          </a>
-        </li>
-        <li>
-          <a href="404.html" class="db-menu-link">
-            <i class="fas fa-sliders-h"></i> Settings
-          </a>
-        </li>
-        <li style="margin-top: auto;">
-          <a href="index.html" class="db-menu-link" style="color: var(--danger);">
-            <i class="fas fa-sign-out-alt"></i> Sign Out
-          </a>
-        </li>
-      </ul>
-      
-      <div class="db-sidebar-footer">
-        <div class="db-user-mini">
-          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Customer Profile" class="db-user-mini-img">
-          <div class="db-user-mini-info">
-            <h5>Divya Sharma</h5>
-            <p>Customer Account</p>
-          </div>
+
+      <div class="dashboard-topbar-actions">
+        <button type="button" class="dashboard-icon-btn dashboard-menu-toggle" id="dashboardMenuToggle" aria-label="Open menu" aria-expanded="false">
+          <span class="menu-icon"><i class="fas fa-bars"></i></span>
+          <span class="close-icon"><i class="fas fa-xmark"></i></span>
+        </button>
+        <div class="dashboard-status-pill customer-status-pill">
+          <span class="status-dot active"></span>
+          Subscription healthy · Rewards active
+        </div>
+
+        <a href="404.html" class="dashboard-icon-btn db-action-btn">
+          <i class="fas fa-bell"></i>
+          <span class="db-badge-dot"></span>
+        </a>
+        <div class="dashboard-topbar-user">
+          <span class="dashboard-topbar-user-name" id="dashboardTopbarName">Rajesh Kumar</span>
+          <span class="dashboard-topbar-user-role" id="dashboardTopbarRole">Customer Workspace</span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="db-sidebar dashboard-sidebar" id="sidebar">
+      <div class="db-sidebar-profile dashboard-profile-card" style="margin: 12px 14px 10px; padding: 12px; display: flex; align-items: center; gap: 12px;">
+        <div class="dashboard-avatar" id="sidebarUserInitial" style="width: 36px; height: 36px; font-size: 16px; flex-shrink: 0; line-height: 36px;">R</div>
+        <div class="db-sidebar-profile-info" style="gap: 2px;">
+          <span class="dashboard-profile-label" style="font-size: 0.65rem;">Welcome back</span>
+          <h5 id="sidebarUserName" style="font-size: 0.85rem; line-height: 1.2;">Rajesh Kumar</h5>
+          <p id="sidebarUserEmail" style="font-size: 0.7rem;">rajesh.kumar.admin.longest.email</p>
+          <span class="dashboard-role-chip" style="font-size: 0.65rem; padding: 2px 6px; margin-top: 2px; width: fit-content;"><i class="fas fa-star"></i> Growth Plan Owner</span>
+        </div>
+      </div>
+
+      <div class="db-menu-container">
+        <ul class="db-menu dashboard-menu">
+          <li><a href="#" class="db-menu-link active" data-dashboard-tab="dashboard"><i class="fas fa-gauge-high"></i><span class="db-menu-text">Dashboard</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="clusters"><i class="fas fa-cloud"></i><span class="db-menu-text">My Clusters</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="invoices"><i class="fas fa-file-invoice"></i><span class="db-menu-text">Invoices</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="apikeys"><i class="fas fa-key"></i><span class="db-menu-text">API Keys</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="usage"><i class="fas fa-chart-column"></i><span class="db-menu-text">Usage Stats</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="team"><i class="fas fa-users"></i><span class="db-menu-text">Team</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="security"><i class="fas fa-lock"></i><span class="db-menu-text">Security</span></a></li>
+          <li><a href="#" class="db-menu-link" data-dashboard-tab="support"><i class="fas fa-life-ring"></i><span class="db-menu-text">Support</span></a></li>
+        </ul>
+
+        <div class="db-sidebar-footer dashboard-sidebar-footer">
+          <button id="logoutBtn" class="dashboard-logout-btn" type="button">
+            <i class="fas fa-right-from-bracket"></i>
+            Log Out
+          </button>
         </div>
       </div>
     </aside>
 
-    <!-- Right Main Area -->
-    <main class="db-main">
-      
-      <!-- Topbar -->
-      <header class="db-topbar">
-        <div style="display: flex; align-items: center; gap: 15px;">
-          <button class="sidebar-toggle-btn">
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="db-search">
-            <i class="fas fa-search"></i>
-            <input type="text" placeholder="Search resources or documents...">
+    <main class="db-main dashboard-main">
+      <div class="db-content dashboard-content">
+        <section class="customer-interactive-header">
+          <div class="interactive-header-info">
+            <div class="header-badge-wrap">
+              <span class="pulse-dot"></span>
+              <span class="header-badge-text">All Systems Operational</span>
+            </div>
+            <h1 id="dashboardHeroTitle">Welcome back, <span id="dashboardHeroName">Rajesh Kumar</span></h1>
+            <p id="dashboardHeroCopy">Review credits, live usage, team adoption, and renewal readiness from the same dashboard without breaking flow.</p>
+            <div class="header-action-group">
+              <a href="404.html" class="tj-primary-btn"><span class="btn-text">Quick Launch</span><span class="btn-icon"><i class="fas fa-rocket"></i></span></a>
+              <a href="404.html" class="action-circle-btn" title="View Logs"><i class="fas fa-terminal"></i></a>
+              <a href="404.html" class="action-circle-btn" title="Settings"><i class="fas fa-sliders"></i></a>
+            </div>
           </div>
-        </div>
-        
-        <div class="db-topbar-actions">
-          <a href="404.html" class="db-action-btn">
-            <i class="fas fa-bell"></i>
-            <span class="db-badge-dot"></span>
-          </a>
-          <a href="404.html" class="db-action-btn">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="404.html" style="display: flex; align-items: center; gap: 10px;">
-            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Profile" style="width: 36px; height: 36px; border-radius: 50%; object-fit: cover;">
-          </a>
-        </div>
-      </header>
+          <div class="interactive-header-visuals">
+            <div class="visual-ring-card">
+              <svg viewBox="0 0 36 36" class="circular-chart blue">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="78, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="16.5" class="percentage">78%</text>
+                <text x="18" y="24" class="ring-label">API Quota</text>
+              </svg>
+            </div>
+            <div class="visual-ring-card">
+              <svg viewBox="0 0 36 36" class="circular-chart purple">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="64, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="16.5" class="percentage">64%</text>
+                <text x="18" y="24" class="ring-label">Storage</text>
+              </svg>
+            </div>
+            <div class="visual-ring-card">
+              <svg viewBox="0 0 36 36" class="circular-chart green">
+                <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <path class="circle" stroke-dasharray="92, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                <text x="18" y="16.5" class="percentage">92%</text>
+                <text x="18" y="24" class="ring-label">Health</text>
+              </svg>
+            </div>
+          </div>
+        </section>
 
-      <!-- Dashboard Content -->
-      <div class="db-content">
-        
-        <!-- Welcome Bar -->
-        <div class="db-welcome-bar">
-          <div>
-            <h2 class="db-welcome-title">Welcome Back, Divya</h2>
-            <p class="db-welcome-subtitle">All cloud systems are operating optimally from the Salem Region cluster.</p>
+        <section class="db-panel active" data-dashboard-panel="dashboard" data-section-title="Customer Dashboard" data-section-breadcrumb="Customer / Dashboard" data-section-hero="Customer dashboard for <span>Rajesh Kumar</span>" data-section-copy="Track active services, forecasted spend, support updates, and product adoption in a single daily operating view.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Monthly spend</span><strong class="db-stat-value">$6,480</strong><p>Forecast is 7% under budget after archive automation was enabled.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Live environments</span><strong class="db-stat-value">04</strong><p>Two production, one staging, and one analytics sandbox remain healthy.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Service adoption</span><strong class="db-stat-value">81%</strong><p>Your team is actively using observability, alerts, and usage exports.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Renewal readiness</span><strong class="db-stat-value">High</strong><p>Usage growth and seat expansion qualify you for annual savings review.</p></article>
           </div>
-          <div>
-            <a href="404.html" class="btn btn-primary">
-              <i class="fas fa-plus"></i> Deploy New VPS
-            </a>
-          </div>
-        </div>
 
-        <!-- Stats Grid -->
-        <div class="db-stats-grid">
-          <div class="db-stat-card">
-            <div class="db-stat-info">
-              <h6>Active Instances</h6>
-              <div class="db-stat-value">14</div>
-              <div class="db-stat-trend up">
-                <i class="fas fa-arrow-up"></i> +12.5% this month
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Spend trend</h3><span>Last 7 days</span></div>
+              <div class="dashboard-bars">
+                <div class="dashboard-bar"><span style="height: 62%"></span><label>Mon</label></div>
+                <div class="dashboard-bar"><span style="height: 71%"></span><label>Tue</label></div>
+                <div class="dashboard-bar"><span style="height: 68%"></span><label>Wed</label></div>
+                <div class="dashboard-bar"><span style="height: 74%"></span><label>Thu</label></div>
+                <div class="dashboard-bar"><span style="height: 58%"></span><label>Fri</label></div>
+                <div class="dashboard-bar"><span style="height: 49%"></span><label>Sat</label></div>
+                <div class="dashboard-bar"><span style="height: 55%"></span><label>Sun</label></div>
               </div>
-            </div>
-            <div class="db-stat-icon">
-              <i class="fas fa-server"></i>
-            </div>
-          </div>
-          
-          <div class="db-stat-card">
-            <div class="db-stat-info">
-              <h6>RAM Allocation</h6>
-              <div class="db-stat-value">58.2 GB</div>
-              <div class="db-stat-trend up">
-                <i class="fas fa-arrow-up"></i> +8.0% growth
-              </div>
-            </div>
-            <div class="db-stat-icon" style="color: var(--secondary); background-color: rgba(6, 182, 212, 0.08);">
-              <i class="fas fa-microchip"></i>
-            </div>
+              <p class="dashboard-note">Export-heavy workloads pushed Thursday usage above baseline, but reserved credits kept the weekly forecast under plan.</p>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Next best actions</h3><span>Suggested</span></div>
+              <ul class="dashboard-list">
+                <li><strong>Enable failover alerts</strong><span>Add one more notification route for production cost spikes.</span></li>
+                <li><strong>Rotate API keys</strong><span>Two keys are older than your recommended security policy.</span></li>
+                <li><strong>Invite finance viewer</strong><span>Share invoice insights with billing stakeholders directly.</span></li>
+              </ul>
+            </article>
           </div>
 
-          <div class="db-stat-card">
-            <div class="db-stat-info">
-              <h6>Monthly Spend</h6>
-              <div class="db-stat-value">$142.50</div>
-              <div class="db-stat-trend down">
-                <i class="fas fa-arrow-down"></i> -4.2% optimization
+          <div class="dashboard-three-col">
+            <article class="dashboard-card dashboard-image-card">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" alt="Customer overview">
+              <div>
+                <h3>Your rollout pulse</h3>
+                <p>Environment health, spend efficiency, and feature usage are trending upward after the last service rollout.</p>
               </div>
-            </div>
-            <div class="db-stat-icon" style="color: #10b981; background-color: var(--success-glow);">
-              <i class="fas fa-wallet"></i>
-            </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Workspace health</h3><span>Current cycle</span></div>
+              <div class="dashboard-progress-group">
+                <div><label>API quota used</label><div class="dashboard-progress"><span class="db-progress-bar" data-value="78%" style="width:78%"></span></div></div>
+                <div><label>Storage allocation</label><div class="dashboard-progress"><span class="db-progress-bar" data-value="64%" style="width:64%"></span></div></div>
+                <div><label>Team adoption</label><div class="dashboard-progress"><span class="db-progress-bar" data-value="88%" style="width:88%"></span></div></div>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Recent activity</h3><span>Workspace feed</span></div>
+              <ul class="dashboard-timeline">
+                <li><strong>09:15</strong><span>Usage report exported for finance review.</span></li>
+                <li><strong>10:42</strong><span>Sandbox storage class upgraded automatically.</span></li>
+                <li><strong>11:08</strong><span>New team invite accepted by analytics lead.</span></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="db-panel" data-dashboard-panel="clusters" data-section-title="My Clusters" data-section-breadcrumb="Customer / My Clusters" data-section-hero="Cluster inventory and <span>environment health</span>" data-section-copy="Compare production, staging, and analytics environments with latency, cost, and maintenance posture in one place.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Production clusters</span><strong>02</strong><p>Both regions are within latency and failover targets.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Median latency</span><strong>70ms</strong><p>East and West production pools remain balanced after routing updates.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Maintenance windows</span><strong>01</strong><p>Staging patch cycle is scheduled for tonight at 02:00 UTC.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Cost efficiency</span><strong>+12%</strong><p>Archive automation reduced idle storage spend this month.</p></article>
           </div>
 
-          <div class="db-stat-card">
-            <div class="db-stat-info">
-              <h6>Cluster Latency</h6>
-              <div class="db-stat-value">18.4ms</div>
-              <div class="db-stat-trend up" style="color: var(--success);">
-                <i class="fas fa-check"></i> Highly Stable
-              </div>
-            </div>
-            <div class="db-stat-icon" style="color: var(--accent); background-color: rgba(59, 130, 246, 0.08);">
-              <i class="fas fa-tachometer-alt"></i>
-            </div>
-          </div>
-        </div>
-
-        <!-- Main Details Rows -->
-        <div class="db-row">
-          
-          <!-- Cloud Instance Management Panel -->
-          <div class="db-panel">
-            <div class="db-panel-header">
-              <h3 class="db-panel-title">My Deployments</h3>
-              <a href="404.html" class="auth-link" style="font-size: 0.85rem; font-weight: 700;">View All</a>
-            </div>
-            
-            <div class="table-wrapper" style="margin-top: 0; box-shadow: none; border: none;">
-              <table class="comparison-table" style="font-size: 0.9rem;">
-                <thead>
-                  <tr>
-                    <th>Instance Name</th>
-                    <th>Node IP</th>
-                    <th>Specs</th>
-                    <th>Status</th>
-                    <th>Actions</th>
-                  </tr>
-                </thead>
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Environment lineup</h3><span>Current state</span></div>
+              <table class="dashboard-table">
                 <tbody>
-                  <tr>
-                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                      <i class="fas fa-terminal" style="color: var(--primary);"></i> Web-Core-01
-                    </td>
-                    <td>103.45.18.29</td>
-                    <td>2 vCPU / 4GB RAM</td>
-                    <td><span class="badge-status active">Active</span></td>
-                    <td>
-                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
-                        Manage
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                      <i class="fas fa-database" style="color: var(--accent);"></i> DB-Replica-Salem
-                    </td>
-                    <td>103.45.18.35</td>
-                    <td>4 vCPU / 8GB RAM</td>
-                    <td><span class="badge-status active">Active</span></td>
-                    <td>
-                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
-                        Manage
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                      <i class="fas fa-network-wired" style="color: var(--secondary);"></i> Nginx-LoadBalancer
-                    </td>
-                    <td>103.45.18.12</td>
-                    <td>1 vCPU / 2GB RAM</td>
-                    <td><span class="badge-status active">Active</span></td>
-                    <td>
-                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
-                        Manage
-                      </a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td style="font-weight: 700; display: flex; align-items: center; gap: 8px;">
-                      <i class="fas fa-folder-open" style="color: var(--text-light);"></i> File-Archive-Temp
-                    </td>
-                    <td>103.45.22.84</td>
-                    <td>1 vCPU / 1GB RAM</td>
-                    <td><span class="badge-status failed">Stopped</span></td>
-                    <td>
-                      <a href="404.html" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem; border-radius: var(--radius-sm);">
-                        Manage
-                      </a>
-                    </td>
-                  </tr>
+                  <tr><td>Production East</td><td>Healthy</td><td>68ms median</td></tr>
+                  <tr><td>Production West</td><td>Healthy</td><td>72ms median</td></tr>
+                  <tr><td>Staging</td><td>Maintenance</td><td>Patch window tonight</td></tr>
+                  <tr><td>Analytics Sandbox</td><td>Warm</td><td>Scale-on-demand</td></tr>
                 </tbody>
               </table>
-            </div>
+            </article>
+            <article class="dashboard-card dashboard-image-card">
+              <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1200&q=80" alt="Customer clusters">
+              <div>
+                <h3>Environment strategy</h3>
+                <p>Production remains balanced across two regions, while staging is held lean to contain non-essential compute spend.</p>
+              </div>
+            </article>
           </div>
 
-          <!-- Storage Allotment -->
-          <div class="db-panel">
-            <div class="db-panel-header">
-              <h3 class="db-panel-title">Resource Quota</h3>
+          <article class="dashboard-card">
+            <div class="dashboard-card-head"><h3>Environment lanes</h3><span>By operating phase</span></div>
+            <div class="dashboard-lane-grid">
+              <div><h4>Production</h4><p>Dual-region failover with reserved throughput and automated health checks.</p></div>
+              <div><h4>Staging</h4><p>Lean footprint for release validation and integration testing only.</p></div>
+              <div><h4>Analytics</h4><p>Scale-on-demand sandbox for exports, dashboards, and experimentation.</p></div>
             </div>
-            
-            <div class="db-progress-group">
-              <div class="db-progress-info">
-                <span class="db-progress-label">Block Storage (120 GB used)</span>
-                <span class="db-progress-val">80%</span>
-              </div>
-              <div class="db-progress-bg">
-                <div class="db-progress-bar" data-value="80%"></div>
-              </div>
-            </div>
+          </article>
+        </section>
 
-            <div class="db-progress-group">
-              <div class="db-progress-info">
-                <span class="db-progress-label">Object Storage (14 GB used)</span>
-                <span class="db-progress-val">28%</span>
-              </div>
-              <div class="db-progress-bg">
-                <div class="db-progress-bar" data-value="28%" style="background: linear-gradient(90deg, var(--secondary) 0%, #10b981 100%);"></div>
-              </div>
-            </div>
-
-            <div class="db-progress-group" style="margin-bottom: 0;">
-              <div class="db-progress-info">
-                <span class="db-progress-label">Virtual Networks (7 / 10 Vnets)</span>
-                <span class="db-progress-val">70%</span>
-              </div>
-              <div class="db-progress-bg">
-                <div class="db-progress-bar" data-value="70%" style="background: linear-gradient(90deg, var(--accent) 0%, var(--primary) 100%);"></div>
-              </div>
-            </div>
+        <section class="db-panel" data-dashboard-panel="invoices" data-section-title="Invoices and Plans" data-section-breadcrumb="Customer / Invoices" data-section-hero="Invoices, credits, and <span>payment visibility</span>" data-section-copy="Review current invoices, credit usage, and projected spend without leaving the workspace.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Open balance</span><strong>$1,140</strong><p>Due on 18 Jul with credits already applied.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Credits remaining</span><strong>$920</strong><p>Estimated to cover 14% of this cycle's final bill.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Annual savings</span><strong>$8,400</strong><p>Compared with equivalent on-demand cluster usage.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Forecast variance</span><strong>+3%</strong><p>Mostly driven by export-heavy workloads this month.</p></article>
           </div>
 
-        </div>
-
-        <!-- Activity Log Rows -->
-        <div class="db-row equal">
-          
-          <div class="db-panel">
-            <div class="db-panel-header">
-              <h3 class="db-panel-title">Audit Trail Logs</h3>
-            </div>
-            
-            <div class="db-feed">
-              <div class="db-feed-item">
-                <div class="db-feed-indicator success">
-                  <i class="fas fa-check"></i>
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Recent invoices</h3><span>Billing history</span></div>
+              <div class="invoice-list">
+                <div class="invoice-row">
+                  <div class="invoice-info">
+                    <h4>INV-2026-071 &bull; July 2026</h4>
+                    <p>Generated on Jul 1, 2026</p>
+                  </div>
+                  <div class="invoice-actions">
+                    <span class="status-pill status-paid">Paid</span>
+                    <strong class="invoice-amount">$6,122</strong>
+                    <button class="api-key-btn" title="Download PDF"><i class="fas fa-download"></i></button>
+                  </div>
                 </div>
-                <div class="db-feed-content">
-                  <h5>VPS instance Web-Core-01 rebooted</h5>
-                  <p>Triggered by Divya Sharma via SSH Client API � 10 mins ago</p>
+                <div class="invoice-row">
+                  <div class="invoice-info">
+                    <h4>INV-2026-072 &bull; August 2026</h4>
+                    <p>Due on Aug 18, 2026</p>
+                  </div>
+                  <div class="invoice-actions">
+                    <span class="status-pill status-pending">Open</span>
+                    <strong class="invoice-amount">$1,140</strong>
+                    <button class="api-key-btn" title="Download PDF"><i class="fas fa-download"></i></button>
+                  </div>
                 </div>
-              </div>
-
-              <div class="db-feed-item">
-                <div class="db-feed-indicator success">
-                  <i class="fas fa-check"></i>
-                </div>
-                <div class="db-feed-content">
-                  <h5>Subscription tier updated</h5>
-                  <p>Tier upgraded to Professional SaaS Core Plan � 2 hours ago</p>
-                </div>
-              </div>
-
-              <div class="db-feed-item">
-                <div class="db-feed-indicator warning">
-                  <i class="fas fa-exclamation-triangle"></i>
-                </div>
-                <div class="db-feed-content">
-                  <h5>Storage utilization threshold warning</h5>
-                  <p>Block Storage partition Web-Core-01 has exceeded 80% usage capacity � 1 day ago</p>
+                <div class="invoice-row">
+                  <div class="invoice-info">
+                    <h4>INV-2026-070 &bull; June 2026</h4>
+                    <p>Paid on Jun 12, 2026</p>
+                  </div>
+                  <div class="invoice-actions">
+                    <span class="status-pill status-paid">Paid</span>
+                    <strong class="invoice-amount">$5,980</strong>
+                    <button class="api-key-btn" title="Download PDF"><i class="fas fa-download"></i></button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Collections health</h3><span>Current cycle</span></div>
+              <div class="dashboard-progress-group">
+                <div><label>Credits applied</label><div class="dashboard-progress"><span class="db-progress-bar" data-value="44%" style="width:44%"></span></div></div>
+                <div><label>Forecasted spend</label><div class="dashboard-progress"><span class="db-progress-bar" data-value="72%" style="width:72%"></span></div></div>
+                <div><label>Renewal confidence</label><div class="dashboard-progress"><span class="db-progress-bar" data-value="91%" style="width:91%"></span></div></div>
+              </div>
+              <p class="dashboard-note">Annual plan credits are offsetting burst usage while finance reviews the next seat expansion forecast.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="db-panel" data-dashboard-panel="apikeys" data-section-title="API Key Management" data-section-breadcrumb="Customer / API Keys" data-section-hero="API keys and <span>integration access</span>" data-section-copy="Review active credentials, scopes, and last-used patterns so integrations stay secure and observable.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Active keys</span><strong>03</strong><p>Two production keys and one sandbox credential remain in rotation.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Rotation coverage</span><strong>67%</strong><p>One legacy sandbox key still needs archive approval.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Last used</span><strong>12m ago</strong><p>Production analytics key served the latest export workflow.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Scope warnings</span><strong>01</strong><p>One key still has broader write access than policy recommends.</p></article>
           </div>
 
-          <div class="db-panel">
-            <div class="db-panel-header">
-              <h3 class="db-panel-title">Active Regions</h3>
-            </div>
-            
-            <!-- Quick simulated map look -->
-            <div style="background-color: var(--bg-main); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 24px; text-align: center;">
-              <i class="fas fa-globe-asia" style="font-size: 3.5rem; color: var(--primary); margin-bottom: 16px;"></i>
-              <h4 style="margin-bottom: 8px;">Salem primary cluster (India)</h4>
-              <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.5;">Your systems are running from MMR Complex, Chinna Thirupathi Node. Latency from Salem region: <strong style="color: var(--success);">18.4 ms</strong>.</p>
-              
-              <div style="display: flex; gap: 10px; justify-content: center; margin-top: 20px;">
-                <span style="font-size: 0.8rem; background-color: var(--accent-light); color: var(--primary); padding: 4px 10px; border-radius: 50px; font-weight: 700;">APAC-SOUTH-1A</span>
-                <span style="font-size: 0.8rem; background-color: var(--bg-card); border: 1px solid var(--border); color: var(--text-muted); padding: 4px 10px; border-radius: 50px; font-weight: 700;">Healthy</span>
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Production Keys</h3><span>Active</span></div>
+              <div class="api-key-box">
+                <span class="api-key-code">pk_live_84f93nd...</span>
+                <button class="api-key-btn"><i class="fas fa-copy"></i> Copy</button>
               </div>
-            </div>
+              <div class="api-key-box">
+                <span class="api-key-code">pk_live_analytics_22x...</span>
+                <button class="api-key-btn"><i class="fas fa-copy"></i> Copy</button>
+              </div>
+              <div class="settings-actions">
+                <button class="tj-primary-btn"><span class="btn-text">Generate New Key</span></button>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Sandbox Keys</h3><span>Testing</span></div>
+              <div class="api-key-box">
+                <span class="api-key-code">sk_test_44p00md...</span>
+                <button class="api-key-btn"><i class="fas fa-copy"></i> Copy</button>
+              </div>
+              <ul class="dashboard-timeline" style="margin-top: 16px;">
+                <li><strong>Legacy sandbox key</strong><span>No access in 12 days; safe to archive.</span></li>
+                <li><strong>Webhook secret</strong><span>Rotated successfully during the last security review.</span></li>
+              </ul>
+            </article>
           </div>
 
-        </div>
+          <article class="dashboard-card">
+            <div class="dashboard-card-head"><h3>Access hygiene lanes</h3><span>Recommended</span></div>
+            <div class="dashboard-lane-grid">
+              <div><h4>Production</h4><p>Limit write scopes and rotate keys every 90 days for live integrations.</p></div>
+              <div><h4>Sandbox</h4><p>Archive stale credentials after testing cycles complete.</p></div>
+              <div><h4>Audit trail</h4><p>Review last-used timestamps before granting broader API scopes.</p></div>
+            </div>
+          </article>
+        </section>
 
+        <section class="db-panel" data-dashboard-panel="usage" data-section-title="Usage Statistics" data-section-breadcrumb="Customer / Usage Stats" data-section-hero="Usage trends and <span>quota planning</span>" data-section-copy="Understand how teams consume API, storage, and automation credits so you can plan upgrades with confidence.">
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Usage by service</h3><span>Month to date</span></div>
+              <div class="chart-mockup">
+                <div class="chart-bar" style="height: 88%" title="API"><span class="chart-val">88%</span><span class="chart-lbl">API</span></div>
+                <div class="chart-bar" style="height: 72%" title="Storage"><span class="chart-val">72%</span><span class="chart-lbl">Store</span></div>
+                <div class="chart-bar" style="height: 64%" title="Exports"><span class="chart-val">64%</span><span class="chart-lbl">Export</span></div>
+                <div class="chart-bar" style="height: 55%" title="Alerts"><span class="chart-val">55%</span><span class="chart-lbl">Alerts</span></div>
+                <div class="chart-bar" style="height: 42%" title="Seats"><span class="chart-val">42%</span><span class="chart-lbl">Seats</span></div>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Workload mix</h3><span>Global</span></div>
+              <div class="multi-circle-chart-wrapper">
+                <div class="multi-circle-chart">
+                  <div class="circle-inner">
+                    <h3>14K</h3>
+                    <span>Requests</span>
+                  </div>
+                </div>
+                <div class="circle-legend">
+                  <div class="legend-item"><span class="legend-color" style="background:#3b82f6;"></span> API (48%)</div>
+                  <div class="legend-item"><span class="legend-color" style="background:#06b6d4;"></span> Storage (28%)</div>
+                  <div class="legend-item"><span class="legend-color" style="background:#8b5cf6;"></span> Exports (24%)</div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <article class="dashboard-card">
+            <div class="dashboard-card-head"><h3>Quota overview</h3><span>Forecast</span></div>
+            <div class="dashboard-analytics-list">
+              <div class="analytics-bar-row">
+                <div class="analytics-bar-label"><span>API request quota</span><span>78%</span></div>
+                <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 78%"></div></div>
+              </div>
+              <div class="analytics-bar-row">
+                <div class="analytics-bar-label"><span>Storage allocation</span><span>64%</span></div>
+                <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 64%"></div></div>
+              </div>
+              <div class="analytics-bar-row">
+                <div class="analytics-bar-label"><span>Export jobs</span><span>51%</span></div>
+                <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 51%"></div></div>
+              </div>
+              <div class="analytics-bar-row">
+                <div class="analytics-bar-label"><span>Automation credits</span><span>39%</span></div>
+                <div class="progress-bar-container"><div class="progress-bar-fill" style="width: 39%"></div></div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="db-panel" data-dashboard-panel="team" data-section-title="Team Workspace" data-section-breadcrumb="Customer / Team" data-section-hero="Team access and <span>workspace adoption</span>" data-section-copy="View collaborators, seat growth, workspace activity, and permission hygiene without jumping into separate admin pages.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Active members</span><strong>17</strong><p>Five engineering, four product, three finance, and partner stakeholders.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Weekly active rate</span><strong>88%</strong><p>Most usage comes from analytics and budget reporting workflows.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Pending invites</span><strong>03</strong><p>Two vendors and one analyst still need to accept secure invites.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Seat utilization</span><strong>94%</strong><p>Two additional seats remain before the Growth plan threshold.</p></article>
+          </div>
+
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Collaborator queue</h3><span>Actionable</span></div>
+              <table class="dashboard-table">
+                <tbody>
+                  <tr><td>Finance viewer</td><td>Pending invite</td><td>Expires in 4 days</td></tr>
+                  <tr><td>Vendor integration</td><td>Accepted</td><td>Read-only scope</td></tr>
+                  <tr><td>Analytics lead</td><td>Active</td><td>Editor access</td></tr>
+                </tbody>
+              </table>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Adoption timeline</h3><span>This month</span></div>
+              <ul class="dashboard-timeline">
+                <li><strong>Mon</strong><span>Dashboard exports increased after finance onboarding.</span></li>
+                <li><strong>Wed</strong><span>Two new alert routes activated for production spend.</span></li>
+                <li><strong>Fri</strong><span>Team usage review completed with no access drift found.</span></li>
+              </ul>
+            </article>
+          </div>
+
+          <article class="dashboard-card">
+            <div class="dashboard-card-head"><h3>Role distribution</h3><span>Current team map</span></div>
+            <div class="dashboard-lane-grid">
+              <div><h4>Owners</h4><p>Budget, billing, and environment policies managed by two workspace owners.</p></div>
+              <div><h4>Editors</h4><p>Operational users can create dashboards, alerts, and usage exports.</p></div>
+              <div><h4>Viewers</h4><p>Finance and leadership users consume reports without changing settings.</p></div>
+            </div>
+          </article>
+        </section>
+
+        <section class="db-panel" data-dashboard-panel="security" data-section-title="Customer Security" data-section-breadcrumb="Customer / Security" data-section-hero="Security controls and <span>account trust</span>" data-section-copy="Keep your workspace safe with MFA, scoped credentials, audit visibility, and proactive recommendations.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">MFA coverage</span><strong>88%</strong><p>15 of 17 seats are already protected with MFA.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Session alerts</span><strong>00</strong><p>No unknown browser sessions found in the last 30 days.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Key hygiene</span><strong>01</strong><p>One stale sandbox credential still needs archive approval.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Policy score</span><strong>92%</strong><p>Region allowlists and role reviews are current for this workspace.</p></article>
+          </div>
+
+          <div class="dashboard-two-col">
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Security checklist</h3><span>Recommended</span></div>
+              <ul class="dashboard-list">
+                <li><strong>MFA coverage</strong><span>Invite the remaining two seats to enroll before next billing cycle.</span></li>
+                <li><strong>Session review</strong><span>No unknown browser sessions found in the last 30 days.</span></li>
+                <li><strong>Key hygiene</strong><span>Archive one stale sandbox credential to close the last warning.</span></li>
+              </ul>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Audit highlights</h3><span>Recent</span></div>
+              <ul class="dashboard-timeline">
+                <li><strong>07 Jul</strong><span>Workspace owner approved new finance viewer access.</span></li>
+                <li><strong>06 Jul</strong><span>Region allowlist updated for two production integrations.</span></li>
+                <li><strong>04 Jul</strong><span>Quarterly API key review completed successfully.</span></li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="db-panel" data-dashboard-panel="support" data-section-title="Support and Success" data-section-breadcrumb="Customer / Support" data-section-hero="Support coverage and <span>customer success</span>" data-section-copy="See open cases, success motions, and self-service resources so issues are resolved quickly and proactively.">
+          <div class="dashboard-stat-grid">
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Open cases</span><strong>02</strong><p>One optimization review and one invoice clarification remain active.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Response target</span><strong>28m</strong><p>Priority support remains inside the Growth plan SLA this week.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Success sessions</span><strong>01</strong><p>Quarterly optimization review is scheduled for next Wednesday.</p></article>
+            <article class="dashboard-card dashboard-stat-card"><span class="dashboard-card-label">Runbook coverage</span><strong>87%</strong><p>Most common workspace escalations already have self-service guides.</p></article>
+          </div>
+
+          <div class="dashboard-two-col">
+            <article class="dashboard-card dashboard-image-card">
+              <img src="https://images.unsplash.com/photo-1629904853716-f0bc54eea481?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Customer support">
+              <div>
+                <h3>Support heartbeat</h3>
+                <p>Your current plan includes priority responses, onboarding guidance, and quarterly optimization reviews for all active environments.</p>
+              </div>
+            </article>
+            <article class="dashboard-card">
+              <div class="dashboard-card-head"><h3>Open conversations</h3><span>With Stackly</span></div>
+              <ul class="dashboard-list">
+                <li><strong>Optimization review</strong><span>Scheduled for next Wednesday with platform success.</span></li>
+                <li><strong>Invoice clarification</strong><span>Finance ticket awaiting final approval note.</span></li>
+                <li><strong>Usage onboarding</strong><span>Knowledge base pack delivered to your team.</span></li>
+              </ul>
+            </article>
+          </div>
+        </section>
       </div>
-
     </main>
-
   </div>
 
-  <!-- Script -->
-  <script src="js/main.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
-
-
-
-

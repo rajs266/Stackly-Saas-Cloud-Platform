@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In | Stackly SaaS Cloud Platform</title>
+  <title>Sign Up | Stackly SaaS Cloud Platform</title>
   
   <link rel="icon" type="image/webp" href="assets/top-logo.webp">
   
@@ -16,7 +16,7 @@
   <div class="custom-cursor-dot"></div>
   <div class="custom-cursor-ring"></div>
 
-  <section class="auth-section" style="--page-hero-bg: url('assets/img-ext-54.webp');">
+  <section class="auth-section" style="--page-hero-bg: url('assets/img-ext-55.webp');">
     <div class="auth-card reveal zoom-in">
       <div class="auth-top-bar" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; gap: 16px;">
         <a href="index.html" class="logo-container" style="margin-bottom: 0;">
@@ -26,33 +26,40 @@
           <i class="fas fa-arrow-left"></i> Back to Home
         </a>
       </div>
-      
+
       <div class="auth-header" style="margin-bottom: 30px;">
-        <h2 class="auth-title">Welcome back</h2>
-        <p class="auth-subtitle">Access your SaaS cloud control center</p>
+        <h2 class="auth-title">Provision Platform</h2>
+        <p class="auth-subtitle">Deploy your dedicated cloud cluster in Salem, India</p>
       </div>
 
-      <form class="signin-form" id="signinForm">
+      <form class="getstarted-form" id="signupForm">
         
         <div class="role-selector">
           <label class="role-option">
-            <input type="radio" name="role" value="admin" id="roleAdmin" checked>
-            <div class="role-card" id="roleBadgeAdmin">
+            <input type="radio" name="role" value="admin" id="signupRoleAdmin" checked>
+            <div class="role-card">
               <i class="fa-solid fa-user-shield"></i> Admin
             </div>
           </label>
           <label class="role-option">
-            <input type="radio" name="role" value="customer" id="roleCustomer">
-            <div class="role-card" id="roleBadgeCustomer">
+            <input type="radio" name="role" value="customer" id="signupRoleCustomer">
+            <div class="role-card">
               <i class="fa-solid fa-user"></i> Customer
             </div>
           </label>
         </div>
 
-        <div class="form-group signin-form-group" id="nameGroup">
-          <label class="form-label" for="fullName">Full Name</label>
-          <input type="text" id="fullName" class="form-input signin-form-input" placeholder="Enter Your Full Name">
-          <span class="error-message">Please enter your full name.</span>
+        <div class="form-group-row">
+          <div class="form-group signin-form-group" id="fnameGroup">
+            <label class="form-label" for="firstName">First Name</label>
+            <input type="text" id="firstName" class="form-input signin-form-input" placeholder="First Name">
+            <span class="error-message">Name must contain only alphabets.</span>
+          </div>
+          <div class="form-group signin-form-group" id="lnameGroup">
+            <label class="form-label" for="lastName">Last Name</label>
+            <input type="text" id="lastName" class="form-input signin-form-input" placeholder="Last Name">
+            <span class="error-message">Name must contain only alphabets.</span>
+          </div>
         </div>
 
         <div class="form-group signin-form-group" id="emailGroup">
@@ -60,26 +67,39 @@
           <input type="text" id="email" class="form-input signin-form-input" placeholder="name@company.com">
           <span class="error-message">Please enter a valid email address.</span>
         </div>
+
         <div class="form-group signin-form-group" id="passwordGroup">
           <label class="form-label" for="password">Password</label>
           <div class="password-wrapper">
-            <input type="password" id="password" class="form-input signin-form-input" placeholder="Enter Your Password">
-            <button type="button" class="password-toggle" id="togglePassword" aria-label="Toggle password visibility">
+            <input type="password" id="password" class="form-input signin-form-input" placeholder="Enter password">
+            <button type="button" class="password-toggle togglePassword" aria-label="Toggle password visibility">
               <i class="fa-regular fa-eye"></i>
             </button>
           </div>
           <span class="error-message">Password is required.</span>
         </div>
 
-        <div class="auth-links">
-          <label style="display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-light);">
-            <input type="checkbox" style="accent-color: var(--primary);"> Remember me
-          </label>
-          <a href="404.html" class="auth-link">Forgot password?</a>
+        <div class="form-group signin-form-group" id="confirmPasswordGroup">
+          <label class="form-label" for="confirmPassword">Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" id="confirmPassword" class="form-input signin-form-input" placeholder="Re-enter password">
+            <button type="button" class="password-toggle togglePassword" aria-label="Toggle password visibility">
+              <i class="fa-regular fa-eye"></i>
+            </button>
+          </div>
+          <span class="error-message">Passwords do not match.</span>
         </div>
 
-        <button type="submit" class="btn btn-primary" id="signinSubmit" style="width: 100%; padding: 14px;">
-          <span class="btn-text">Sign In <i class="fas fa-arrow-right"></i></span>
+        <div style="font-size: 0.8rem; color: var(--text-light); text-align: left; margin-bottom: 24px;" class="signin-form-group" id="termsGroup">
+          <label style="display: flex; gap: 8px; align-items: center; cursor: pointer;">
+            <input type="checkbox" id="terms" style="accent-color: var(--primary);">
+            <span>By signing up, you agree to Stackly's <a href="404.html" class="auth-link">Terms of Service</a> and <a href="404.html" class="auth-link">Privacy Policy</a>.</span>
+          </label>
+          <span class="error-message" id="termsError">You must agree to the terms.</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="signupSubmit" style="width: 100%; padding: 14px;">
+          <span class="btn-text">Create New Account <i class="fas fa-user-plus"></i></span>
         </button>
       </form>
 
@@ -95,13 +115,13 @@
       </div>
 
       <div class="auth-footer">
-        Don't have an account? <a href="signup.html">Get Started</a>
+        Already have an account? <a href="signin.html">Sign In</a>
       </div>
     </div>
   </section>
 
   <div class="auth-toast-container">
-    <div id="signinToast" class="auth-toast">
+    <div id="signupToast" class="auth-toast">
       <i class="fas fa-info-circle"></i>
       <span class="toast-message">Message goes here</span>
     </div>
@@ -110,4 +130,3 @@
   <script src="main.js"></script>
 </body>
 </html>
-

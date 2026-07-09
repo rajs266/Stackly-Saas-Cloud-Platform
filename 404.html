@@ -8,21 +8,95 @@
 
     <title>Node Not Found | Stackly SaaS Cloud Platform</title>
 
-    <!-- Favicon -->
     <link rel="icon" type="image/webp" href="assets/top-logo.webp" />
 
-    <!-- CSS here -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .error-title-anim {
+        animation: floatError 4s ease-in-out infinite;
+        text-shadow: 0 0 20px rgba(var(--primary-rgb), 0.5);
+      }
+      .error-subtitle-anim {
+        animation: pulseText 3s infinite alternate;
+      }
+      .error-desc-anim {
+        animation: fadeInUp 1.5s ease-out;
+      }
+      .error-btns-anim {
+        animation: fadeInUp 2s ease-out;
+      }
+      @keyframes floatError {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-20px) scale(1.05); text-shadow: 0 0 40px rgba(var(--primary-rgb), 0.8); }
+      }
+      @keyframes pulseText {
+        0% { opacity: 0.8; transform: scale(0.98); }
+        100% { opacity: 1; transform: scale(1.02); }
+      }
+      @keyframes fadeInUp {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      .btn-go-back {
+        background: rgba(255, 255, 255, 0.05) !important;
+        border: 1px solid rgba(250, 204, 21, 0.3) !important;
+        transition: all 0.3s ease;
+      }
+      .btn-go-back:hover {
+        background: rgba(250, 204, 21, 0.15) !important;
+        border-color: #facc15 !important;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(250, 204, 21, 0.2);
+      }
+
+      /* Animated Background Shapes */
+      .bg-shape {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(100px);
+        z-index: 0;
+        animation: floatShape 12s infinite alternate ease-in-out;
+        pointer-events: none;
+      }
+      .shape-1 {
+        width: 40vw;
+        height: 40vw;
+        background: rgba(250, 204, 21, 0.15);
+        top: -10%;
+        left: -10%;
+      }
+      .shape-2 {
+        width: 45vw;
+        height: 45vw;
+        background: rgba(18, 193, 135, 0.12);
+        bottom: -20%;
+        right: -10%;
+        animation-delay: -4s;
+      }
+      .shape-3 {
+        width: 35vw;
+        height: 35vw;
+        background: rgba(59, 130, 246, 0.15);
+        top: 30%;
+        left: 40%;
+        animation-delay: -8s;
+      }
+      @keyframes floatShape {
+        0% { transform: translate(0, 0) scale(1); }
+        33% { transform: translate(50px, -50px) scale(1.1); }
+        66% { transform: translate(-30px, 40px) scale(0.9); }
+        100% { transform: translate(40px, 20px) scale(1.05); }
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Custom Cursor Markup -->
+    
     <div class="custom-cursor-dot"></div>
     <div class="custom-cursor-ring"></div>
 
-    <!-- Preloader Start -->
     <div class="preloader" id="preloader" aria-hidden="true">
       <div class="preloader-inner">
         <div class="preloader-rings">
@@ -41,9 +115,7 @@
         </div>
       </div>
     </div>
-    <!-- Preloader end -->
 
-    <!-- Back to top start -->
     <div class="back-to-top-wrapper">
       <button id="back_to_top" type="button" class="back-to-top-btn" aria-label="Back to top">
         <svg class="back-to-top-progress" viewBox="0 0 56 56" aria-hidden="true">
@@ -53,211 +125,39 @@
         <span class="back_to_top_icon"><i class="fas fa-arrow-up"></i></span>
       </button>
     </div>
-    <!-- Back to top end -->
 
-    <!-- start: Search Popup -->
-    <div class="search_popup">
-      <div class="search_close">
-        <button type="button" class="search_close_btn">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="search-box">
-              <input class="search-input-field" type="search" placeholder="Search projects, nodes, or database logs..." required />
-              <button type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- end: Search Popup -->
-
-        <!-- start: Offcanvas Menu -->
-    <div class="tj-offcanvas-area">
-      <div class="offcanvas-header">
-        <a href="index.html" class="logo-container">
-          <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
-        </a>
-        <button type="button" class="hamburger_close_btn" aria-label="Close menu">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <nav class="offcanvas-nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="service.html">Services</a></li>
-          <li><a href="features.html">Features</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-      <div class="offcanvas-actions">
-        <a class="offcanvas-signin-btn" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
-        <a class="tj-primary-btn offcanvas-cta-btn" href="getstarted.html">
-          <span class="btn-text">Get Started</span>
-          <span class="btn-icon"><i class="fas fa-rocket"></i></span>
-        </a>
-      </div>
-    </div>
-    <div class="hamburger_bg"></div>
-    <!-- end: Offcanvas Menu -->
-
-    <!-- start: Header Area -->
-    <header class="header-area">
-      <div class="header-wrapper">
-        <div class="site_logo">
-          <a class="logo-container" href="index.html">
-            <img src="assets/logo.webp" alt="Logo" class="logo-img" />
-          </a>
-        </div>
-
-        <div class="menu-area d-none d-lg-inline-flex align-items-center">
-          <nav id="mobile-menu" class="mainmenu">
-            <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="service.html">Services</a></li>
-              <li><a href="features.html">Features</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Contact</a></li>
-
-            </ul>
-          </nav>
-        </div>
-
-        <div class="header-right-item d-none d-lg-inline-flex">
-          <a class="header-signin-link" href="signin.html"><span class="btn-text">Sign In</span><span class="btn-icon"><i class="fas fa-right-to-bracket"></i></span></a>
-          <div class="header-button">
-            <a class="tj-primary-btn" href="getstarted.html">
-              <span class="btn-text">Get Started</span>
-              <span class="btn-icon"><i class="fas fa-rocket"></i></span>
-            </a>
-          </div>
-        </div>
-
-                <button type="button" class="menu_btn mobile_menu_bar d-lg-none" aria-label="Open menu">
-          <span class="menu-icon-open"><span class="cubes"><span></span><span></span><span></span><span></span></span></span>
-          <span class="menu-icon-close"><i class="fas fa-times"></i></span>
-        </button>
-      </div>
-    </header>
-    <!-- end: Header Area -->
-
-    <!-- Main Content -->
     <main>
-      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1550751827-4bd374c873da?auto=format&fit=crop&w=1920&q=80'); min-height: 85vh; display: flex; align-items: center;">
-        <div class="container">
-          <div style="max-width: 600px; margin: 0 auto; text-align: center;" class="reveal zoom-in">
-            <div style="font-size: 8rem; font-family: var(--font-display); font-weight: 700; line-height: 1; color: var(--primary); margin-bottom: 24px;">
+      <section class="page-hero page-hero-bg" style="--page-hero-bg: url('https://images.unsplash.com/photo-1550751827-4bd374c873da?auto=format&fit=crop&w=1920&q=80'); min-height: 85vh; display: flex; align-items: center; position: relative; overflow: hidden;">
+
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+          <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <div class="error-title-anim" style="font-size: 8rem; font-family: var(--font-display); font-weight: 700; line-height: 1; color: var(--primary); margin-bottom: 24px; display: inline-block;">
               404
             </div>
-            <h2 style="font-size: 2.25rem; margin-bottom: 16px; font-family: var(--font-display); color: var(--text-on-dark);">SaaS Page Not Found</h2>
-            <p style="color: var(--text-body-dark); font-size: 1.05rem; margin-bottom: 40px; line-height: 1.7;">
+            <h2 class="error-subtitle-anim" style="font-size: 2.25rem; margin-bottom: 16px; font-family: var(--font-display); color: var(--text-on-dark);">SaaS Page Not Found</h2>
+            <p class="error-desc-anim" style="color: var(--text-body-dark); font-size: 1.05rem; margin-bottom: 40px; line-height: 1.7;">
               The cloud dashboard route you requested is not available. Return to the Stackly SaaS platform home.
             </p>
-            <a href="index.html" class="tj-primary-btn btn-simple">
-              <span class="btn-text">Back to Home</span>
-            </a>
-          </div>
+            <div class="error-btns-anim" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+              <a href="index.html" class="tj-primary-btn btn-simple">
+                <span class="btn-text">Back to Home</span>
+                <span class="btn-icon"><i class="fas fa-home"></i></span>
+              </a>
+              <a href="javascript:history.back()" class="tj-primary-btn btn-simple btn-go-back">
+                <span class="btn-text" style="color: #facc15;">Go Back</span>
+                <span class="btn-icon" style="background: rgba(250, 204, 21, 0.2);"><i class="fas fa-arrow-left" style="color: #facc15;"></i></span>
+              </a>
+            </div>          </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer Component -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-newsletter reveal reveal-up">
-          <div class="footer-newsletter-text">
-            <h3>Subscribe to Stackly Updates</h3>
-            <p>Get product releases, SLA notices, and cloud engineering guides in your inbox.</p>
-          </div>
-          <form class="footer-subscribe-form" action="404.html">
-            <input type="email" placeholder="Enter your email..." required />
-            <button type="submit" class="tj-primary-btn"><span class="btn-text">Subscribe</span></button>
-          </form>
-        </div>
-        <div class="footer-grid">
-          <div class="footer-about">
-            <div class="logo-container">
-              <img src="assets/logo.webp" alt="Stackly Logo" class="logo-img" />
-            </div>
-            <p class="footer-about-desc">Ultimate SaaS Cloud and Dedicated Cluster Platform engineered for high-availability performance. Join 10,000+ developers scaling their infrastructure with us.</p>
-            <div class="social-links">
-              <a href="404.html" class="social-icon"><i class="fab fa-x-twitter"></i></a>
-              <a href="404.html" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-              <a href="404.html" class="social-icon"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Platform</h4>
-            <ul class="footer-links">
-              <li><a href="404.html">Core Features</a></li>
-              <li><a href="404.html">SaaS Solutions</a></li>
-              <li><a href="404.html">Security Shield</a></li>
-              <li><a href="404.html">API Reference</a></li>
-              <li><a href="404.html">Global Network</a></li>
-              <li><a href="404.html">Pricing Plans</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Us</a></li>
-              <li><a href="service.html">Services</a></li>
-              <li><a href="features.html">Features</a></li>
-              <li><a href="blog.html">Blog</a></li>
-              <li><a href="contact.html">Contact</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 class="footer-title">Salem HQ Node</h4>
-            <div class="footer-contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <span>MMR Complex, Chinna Thirupathi, Salem, TN 636008</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-phone-alt"></i>
-              <span>+91 (0) 427 492 849</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-envelope"></i>
-              <span>support@stacklycloud.com</span>
-            </div>
-            <div class="footer-contact-item">
-              <i class="fas fa-clock"></i>
-              <span>Mon - Fri: 9:00 AM - 6:00 PM</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <p>&copy; 2026 Stackly Labs. All rights reserved.</p>
-          <div class="footer-bottom-links">
-            <a href="404.html">Privacy Policy</a>
-            <a href="404.html">Terms of Service</a>
-            <a href="404.html">SLA Commitment</a>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <!-- JS here -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
-
-
-
-
 
